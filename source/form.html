@@ -7,12 +7,12 @@
   <body>
     <header class="main-header">
       <div class="main-header__menu">
-        <div class="main-header__logo">
-          <a>
-            <img alt="Логотип PINK">
-          </a>
-        </div>
-        <button class="main-header__toggle" type="button">Бургерное меню</button>
+        <a class="main-header__logo" href="index.html">
+          <img src="http://placehold.it/75x22" width="75" height="22" alt="Логотип PINK">
+        </a>
+        <button class="main-header__toggle" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
       </div>
       <nav class="main-nav main-header-main-nav">
         <ul class="main-nav__list">
@@ -29,14 +29,13 @@
             <a href="https://htmlacademy.ru/">Html academy</a>
           </li>
         </ul>
-        <button class="main-header__toggle-off" type="button">Вернуть бургер</button>
       </nav>
-      <p class="main-header__description">Конкурс на самое безбашенное путешествие с Пинк</p>
+      <h1 class="main-header__description">Конкурс на самое безбашенное путешествие с Пинк</h1>
     </header>
     <main class="form-page">
-      <h1 class="visually-hidden">Заполнение формы</h1>
       <p class="page-description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-      <form class="form-all">
+      <form class="form-all" action="//echo.htmlacademy.ru" method="post">
+        <fieldset class="form-all__info">
         <p>
           <label for="lastname">Фамилия</label>
           <input type="text" name="lastname" id="lastname" placeholder="Укажите фамилию *" required>
@@ -49,6 +48,7 @@
           <label for="patronymic">Отчество</label>
           <input type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже">
         </p>
+      </fieldset>
         <fieldset class="form-all__form">
           <legend class="form-all__title">Ваши безбашенные достижения в путешествии</legend>
           <ul class="form-all_list">
@@ -78,6 +78,7 @@
             </li>
           </ul>
         </fieldset>
+      </fieldset class="form-all__id">
         <p>
           <label for="phone">Номер телефона</label>
           <input type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
@@ -102,35 +103,45 @@
             </p>
         </fieldset>
         <p>
-          <label for="review"></label>
+          <label for="review">Опишите свои эмоции</label>
           <textarea name="review" id="review">Можно прям в красках, не стесняясь в выражениях</textarea>
         </p>
         <button class="btn" type="submit">Отправить форму</button>
         <p class="form-all__form-transcript">
-          <span class="form-all__transcript-symbol transcript-symbol--*">*</span> — обязательные поля
+          <span class="form-all__transcript-symbol transcript-symbol--star">*</span> — обязательные поля
         </p>
       </form>
     </main>
     <footer class="footer-form">
       <div class="logo-pink">
-        <img alt="Логотип контактного блока страницы">
+        <a class="logo-pink__image" href="index.html">
+          <img src="http://placehold.it/147x40" width="147" height="40" alt="Логотип контактного блока страницы">
+        </a>
       </div>
       <div class="footer-social">
         <ul class="footer-social__list">
           <li class="footer-social__item">
-            <a class="footer-social__social-icon social-icon--twitter">Твиттер</a>
+            <a class="footer-social__social-icon social-icon--twitter">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
           </li>
           <li class="footer-social__item">
-            <a class="footer-social__social-icon social-icon--facebook">Фейсбук</a>
+            <a class="footer-social__social-icon social-icon--facebook">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="footer-social__item">
-            <a class="footer-social__social-icon social-icon--youtube">Ютуб</a>
+            <a class="footer-social__social-icon social-icon--youtube">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
           </li>
         </ul>
       </div>
       <div class="developer">
         <b>Разработано</b>
-        <img alt="HTMLAcademy">
+        <a class="developer__image" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="http://placehold.it/27x34" width="27" height="34" alt="HTMLAcademy">
+        </a>
       </div>
     </footer>
   </body>
