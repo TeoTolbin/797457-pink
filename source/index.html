@@ -7,7 +7,7 @@
   <body>
     <header class="main-header">
       <div class="main-header__menu">
-        <a class="main-header__logo" href="index.html">
+        <a class="main-header__logo">
           <img src="http://placehold.it/75x22" width="75" height="22" alt="Логотип PINK">
         </a>
         <button class="main-header__toggle" type="button">
@@ -90,16 +90,22 @@
             <blockquote class="feedback__feedback-content">Благодаря этому приложению, мои арбузы теперь на расхват! Сочные, спелые, зрелые! Мамой клянусь!</blockquote>
           </li>
         </ul>
-        <p class="feedback__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </p>
+        <ul class="feedback__toggles slider__toggles">
+          <li>
+            <button class="slider__toggle" type="button">1</button>
+          </li>
+          <li>
+            <button class="slider__toggle" type="button">2</button>
+          </li>
+          <li>
+            <button class="slider__toggle" type="button">3</button>
+          </li>
+        </ul>
       </section>
       <section class="app-rates">
         <h2 class="visually-hidden">Тарифы приложения</h2>
         <table class="app-rates rates">
-          <thread class="rates__header">
+          <thead class="rates__header">
             <tr>
               <td class="rates-name">Стандарт</td>
               <td class="rates-name">Стандарт</td>
@@ -110,22 +116,24 @@
               <td class="rates-cost">3,99 usd</td>
               <td class="rates-cost">3,99 usd</td>
             </tr>
-          </thread>
-          <tr>
-            <td class="rates-option rates-option--on">Розовый фильтр</td>
-            <td class="rates-option rates-option--on">Розовый фильтр</td>
-            <td class="rates-option rates-option--on">Розовый фильтр</td>
-          </tr>
-          <tr>
-            <td class="rates-option rates-option--on">Смайлики</td>
-            <td class="rates-option rates-option--on">Смайлики</td>
-            <td class="rates-option rates-option--on">Смайлики</td>
-          </tr>
-          <tr>
-            <td class="rates-option rates-option--off">Комментарии</td>
-            <td class="rates-option rates-option--off">Комментарии</td>
-            <td class="rates-option rates-option--off">Комментарии</td>
-          </tr>
+          </thead>
+          <tbody class="rates__body">
+            <tr>
+              <td class="rates-option rates-option--on">Розовый фильтр</td>
+              <td class="rates-option rates-option--on">Розовый фильтр</td>
+              <td class="rates-option rates-option--on">Розовый фильтр</td>
+            </tr>
+            <tr>
+              <td class="rates-option rates-option--on">Смайлики</td>
+              <td class="rates-option rates-option--on">Смайлики</td>
+              <td class="rates-option rates-option--on">Смайлики</td>
+            </tr>
+            <tr>
+              <td class="rates-option rates-option--off">Комментарии</td>
+              <td class="rates-option rates-option--off">Комментарии</td>
+              <td class="rates-option rates-option--off">Комментарии</td>
+            </tr>
+          </tbody>
         </table>
         <p class="rates__toggles slider__toggles">
           <button class="slider__toggle" type="button">1</button>
