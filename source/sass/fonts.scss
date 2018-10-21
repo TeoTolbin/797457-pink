@@ -1,6 +1,19 @@
 @font-face {
   font-family: "Open Sans";
   src:
+    local("Open Sans Light"),
+    local("OpenSansLight"),
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    local("Open Sans"),
+    local("OpenSans"),
     url("../fonts/opensans.woff2") format("woff2"),
     url("../fonts/opensans.woff") format("woff");
   font-style: normal;
@@ -10,17 +23,10 @@
 @font-face {
   font-family: "Open Sans";
   src:
+    local("Open Sans Bold"),
+    local("OpenSansBold"),
     url("../fonts/opensans.woff2") format("woff2"),
     url("../fonts/opensans.woff") format("woff");
   font-style: normal;
   font-weight: 700;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src:
-    url("../fonts/opensans.woff2") format("woff2"),
-    url("../fonts/opensans.woff") format("woff");
-  font-style: normal;
-  font-weight: 300;
 }

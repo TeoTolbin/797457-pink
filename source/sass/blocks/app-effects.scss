@@ -1,7 +1,169 @@
 .app-effects {
-  background-color: #f2f2f2;
-  background-image: url("../../img/iphone-screen-mobile@1x.png");
+  background-color: $section-background;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-position: center -290px;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  padding: 46px 60px 0 58px;
+  background-size: cover;
+}
+
+.app-effects__question,
+.app-effects__offer {
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+  padding-top: 41px;
+  text-align: center;
+}
+
+.app-effects__offer {
+  padding-top: 31px;
+  padding-bottom: 104px;
+}
+
+.app-effects__list {
+  @include reset-list;
+}
+
+.app-effects__item {
+  text-align: center;
+  padding-bottom: 7px;
+}
+
+.app-effects__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 10px;
+  color: $title-color;
+}
+
+.app-effects__img {
+  padding-top: 19px;
+  display: block;
+  margin: 0 auto;
+}
+
+.app-effects__img-desktop {
+  display: none;
+}
+
+.app-effects__description br,
+.app-effects__title br {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .app-effects {
+    background-position: center -100px;
+    position: relative;
+  }
+
+  .app-effects__question,
+  .app-effects__offer {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .app-effects__offer {
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+
+  .app-effects__question {
+    padding-top: 47px;
+  }
+
+  .app-effects__list {
+    margin-left: 310px;
+    padding-top: 6px;
+    padding-bottom: 20px;
+  }
+
+  .app-effects__item {
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+  .app-effects__img {
+    position: absolute;
+    top: 222px;
+  }
+
+  .app-effects__title br {
+    display: none;
+  }
+
+  .app-effects__img-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .app-effects__img {
+    display: none;
+  }
+
+  .app-effects__question,
+  .app-effects__offer {
+    width: 760px;
+    margin: 0 auto;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .app-effects__question {
+    margin-top: 20px;
+  }
+
+  .app-effects__offer {
+    width: 430px;
+    padding-bottom: 70px;
+  }
+
+  .app-effects__list {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+  }
+
+  .app-effects__item {
+    position: relative;
+    text-align: center;
+    width: 260px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .app-effects__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    margin-top: 55px;
+  }
+
+  .app-effects__description {
+    font-size: 18px;
+    line-height: 30px;
+    width: 240px;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+  .app-effects__description br {
+    display: none;
+  }
+
+  .app-effects__title br {
+    display: block;
+  }
+
+  .app-effects__img-desktop {
+    display: block;
+    width: 260px;
+    height: 300px;
+  }
 }

@@ -1,3 +1,106 @@
 .modal {
-  padding: 46px 26px 52px 26px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 18px;
+  padding-top: 45px;
+  padding-bottom: 25px;
+}
+
+.modal__filling {
+  background-color: $section-background;
+}
+
+.modal__message {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.modal__btn {
+  background-color: $form-color;
+  color: $header-txt-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  border: none;
+  width: 280px;
+  margin: 0 20px;
+  padding: 15px 48px;
+  cursor: pointer;
+  margin-bottom: 50px;
+
+  &:hover,
+  &:focus {
+    background-color: $form-color-hover;
+  }
+
+  &:active {
+    color: rgba($header-txt-color, 0.3%);
+  }
+}
+
+.modal__filling .modal__btn {
+  margin-top: 50px;
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    width: 460px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  .modal__message {
+    width: 320px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+
+  .modal__message br {
+    display: none;
+  }
+
+  .modal__filling .modal__btn {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    width: 780px;
+  }
+
+  .modal__title {
+    width: 400px;
+  }
+
+  .modal__message {
+    width: 400px;
+  }
+
+  .modal__btn {
+    width: 460px;
+  }
+
+  .modal__filling-error {
+    background-color: $section-background;
+    padding-top: 50px;
+  }
 }

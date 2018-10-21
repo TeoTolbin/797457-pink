@@ -1,3 +1,98 @@
 .feedback {
-  padding: 49px 22px 0 22px;
+  background-color: $header-txt-color;
+}
+
+.feedback__list {
+  @include reset-list;
+  position: relative;
+  min-height: 260px;
+  background-color: $header-txt-color;
+  margin-top: -42px;
+  padding-top: 42px;
+}
+
+.feedback__item {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.feedback__item-author {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: $title-color;
+  font-style: normal;
+}
+
+.feedback__item-text {
+  line-height: 30px;
+}
+
+.feedback__item-who {
+  display: none;
+}
+
+.feedback__toggles {
+  width: 70px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__item-text {
+    font-size: 18px;
+  }
+
+  .feedback__item-author {
+    order: 1;
+    font-size: 20px;
+    margin-top: 17px;
+    margin-bottom: 5px;
+  }
+
+  .feedback__item-who {
+    display: block;
+    order: 2;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    background-image: url("../img/icon-quotes.svg");
+    background-position: center 70px;
+    background-repeat: no-repeat;
+  }
+
+  .feedback__list {
+    margin: 0 auto;
+    width: 730px;
+    min-height: 240px;
+  }
+
+  .feedback__item {
+    margin-top: -10px;
+  }
+
+  .slider-feedback {
+    padding-top: 140px;
+  }
+
+  .feedback__item-author {
+    font-size: 24px;
+  }
+
+  .feedback__item-who {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .feedback__toggles {
+    display: none;
+  }
 }

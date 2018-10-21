@@ -1,4 +1,6 @@
-.visually-hidden {
+.visualy-hidden:not(:focus):not(:active),
+input[type="checkbox"].visualy-hidden,
+input[type="radio"].visualy-hidden {
   position: absolute;
   width: 1px;
   height: 1px;

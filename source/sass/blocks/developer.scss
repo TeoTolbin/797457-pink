@@ -1,3 +1,15 @@
-.developer {
-  outline: 2px solid red;
+.developer__logo:hover path,
+.developer__logo:focus path {
+  fill: $main-color;
+}
+
+.developer__logo:active path {
+  fill: rgba($main-color, 0.3%);
+}
+
+@media (min-width: $desktop-width) {
+  .developer__signature {
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
