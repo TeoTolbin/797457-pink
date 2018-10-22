@@ -22,7 +22,7 @@
 }
 
 .app-effects__list {
-  @include reset-list;
+  @include reset-list();
 }
 
 .app-effects__item {

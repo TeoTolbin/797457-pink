@@ -27,7 +27,7 @@
 }
 
 .contacts__list {
-  @include reset-list;
+  @include reset-list();
   background-color: $header-txt-color;
   text-align: center;
 }

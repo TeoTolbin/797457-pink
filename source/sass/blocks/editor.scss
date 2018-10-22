@@ -100,9 +100,25 @@
   padding: 15px 45px 16px 40px;
   width: 280px;
   margin: 0 auto;
+
+  &--submit {
+    border: 3px solid $decoration-color;
+    color: $decoration-color;
+    margin-bottom: 10px;
+
+    &:hover,
+    &:focus {
+      background-color: $decoration-color;
+      color: $header-txt-color;
+    }
+
+    &:active {
+      color: rgba($header-txt-color, 0.3%);
+    }
+  }
 }
 
-.editor__btn--submit {
+/*.editor__btn--submit {
   border: 3px solid $decoration-color;
   color: $decoration-color;
   margin-bottom: 10px;
@@ -117,7 +133,7 @@
     color: rgba($header-txt-color, 0.3%);
   }
 }
-
+*/
 .editor__btn--reset {
   border: 3px solid rgba($main-color, 0.1%);
   color: rgba($main-color, 0.1%);
