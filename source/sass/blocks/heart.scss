@@ -1,0 +1,57 @@
+.heart {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-bottom: 20px;
+
+  &__push {
+    font-size: 0;
+    border: 0;
+    width: 13px;
+    height: 12px;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-right: 20px;
+  }
+
+  &__like {
+    font-size: 12px;
+    color: rgb(210, 40, 86);
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 660px) {
+  .heart {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 10px;
+
+    &__push {
+      margin-right: 0;
+    }
+
+    &--panorama {
+      position: absolute;
+      left: 470px;
+      top: 25px;
+    }
+
+    &__counter {
+      &--panorama {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .heart {
+    &--panorama {
+      left: 790px;
+    }
+  }
+}

@@ -1,15 +1,44 @@
-.developer__logo:hover path,
-.developer__logo:focus path {
-  fill: $main-color;
-}
+.developer {
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
 
-.developer__logo:active path {
-  fill: rgba($main-color, 0.3%);
-}
-
-@media (min-width: $desktop-width) {
-  .developer__signature {
-    font-size: 18px;
+  &__signature {
     line-height: 18px;
+    margin-right: 3px;
+  }
+
+  &__logo {
+    & path {
+      fill: rgb(210, 40, 86);
+    }
+
+    &:hover path {
+      fill: rgb(40, 54, 69);
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  .developer {
+    padding-top: 10px;
+
+    &__signature {
+      margin-right: 6px;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .developer {
+    padding-top: 15px;
+
+    &__signature {
+      font-size: 18px;
+    }
   }
 }

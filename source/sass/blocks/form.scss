@@ -1,0 +1,51 @@
+.form {
+  &__description {
+    line-height: 30px;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 47px;
+    margin-top: -280px;
+    background-color: rgb(255, 255, 255);
+
+    &--add {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  .form {
+    position: relative;
+
+    &__description {
+      font-size: 18px;
+      padding-top: 95px;
+      padding-bottom: 78px;
+      padding-left: 64px;
+      padding-right: 63px;
+      position: relative;
+      z-index: 2;
+      margin-top: -360px;
+
+      &--add {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .form {
+    &__description {
+      margin-top: -550px;
+      padding-left: 82px;
+      padding-right: 82px;
+      padding-top: 92px;
+      padding-bottom: 97px;
+
+      &--add {
+        display: inline-block;
+      }
+    }
+  }
+}

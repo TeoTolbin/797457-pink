@@ -1,0 +1,29 @@
+.panorama {
+  display: inline-block;
+  position: absolute;
+  left: 160px;
+  min-width: 140px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  background-color: rgb(210, 40, 86);
+}
+
+@media (min-width: 660px) {
+  .panorama {
+    left: 500px;
+    top: 60px;
+  }
+}
+
+@media (min-width: 960px) {
+  .panorama {
+    left: 797px;
+    top: 55px;
+  }
+}

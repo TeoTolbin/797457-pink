@@ -2,119 +2,43 @@
   display: none;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: 660px) {
   .effect {
     display: block;
-    position: relative;
-    background-color: $header-txt-color;
-    background-image:
-      url("../img/icon-editor-diagram-fill.svg"),
-      url("../img/icon-timer.svg");
-    background-repeat:
-      no-repeat,
-      no-repeat;
-    background-position:
-      40px 115px,
-      -30px 60px;
-    background-size:
-      200px 200px,
-      340px 275px;
-  }
+    padding-top: 16px;
+    min-height: 356px;
+    background-image: url("../img/icon-timer.svg");
+    background-position: 5% 7%;
+    background-repeat: no-repeat;
+    text-align: left;
+    padding-left: 330px;
 
-  .effect__hour {
-    font-size: 96px;
-    line-height: 150px;
-    color: $decoration-color;
-    font-weight: 600;
-    position: absolute;
-    top: 135px;
-    left: 84px;
-  }
-
-  .effect__scope {
-    padding-top: 96px;
-    padding-left: 309px;
-    padding-bottom: 106px;
-  }
-
-  .effect__scope-headline {
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: 30px;
-    line-height: 36px;
-    color: $title-color;
-  }
-
-  .effect__scope-text {
-    margin: 0;
-    width: 300px;
-    margin-bottom: 10px;
-  }
-
-  .effect__scope-link {
-    color: $decoration-color;
-    text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: $main-color;
-    }
-
-    &:active {
-      color: rgba($main-color, 0.3%);
+    &__headline {
+      font-size: 30px;
+      line-height: 36px;
+      color: rgb(0, 0, 0);
+      padding-right: 0;
+      margin-bottom: -8px;
     }
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: 960px) {
   .effect {
-    background-color: $section-background;
-    background-position:
-      150px 105px,
-      105px 35px;
-    background-size:
-      255px 253px,
-      345px 345px;
-  }
-
-  .effect__hour {
-    font-size: 120px;
-    line-height: 190px;
-    top: 130px;
-    left: 210px;
-  }
-
-  .effect__scope {
-    margin-left: 365px;
-    width: 580px;
-    padding-top: 130px;
-    padding-left: 0;
+    background-color: rgb(242, 242, 242);
+    padding-left: 390px;
+    padding-right: 50px;
+    padding-top: 78px;
+    background-position: 3% 22%;
+    background-size: 298px 345px;
     padding-bottom: 110px;
-  }
 
-  .effect__scope-headline {
-    margin-bottom: 25px;
-    line-height: 30px;
-  }
+    &__headline {
+      margin-bottom: 2px;
 
-  .effect__scope-headline br {
-    display: none;
-  }
-
-  .effect__scope-text,
-  .effect__scope-link {
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  .effect__scope-text {
-    width: 530px;
-    margin-bottom: 30px;
-    white-space: pre-line;
-  }
-
-  .effect__scope-text br {
-    display: none;
+      & br {
+        display: none;
+      }
+    }
   }
 }

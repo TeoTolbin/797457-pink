@@ -1,0 +1,11 @@
+.main-page {
+  padding: 0;
+  padding-top: 46px;
+  margin: 0;
+}
+
+@media (min-width: 660px) {
+  .main-page {
+    padding-top: 0;
+  }
+}

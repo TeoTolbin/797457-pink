@@ -1,0 +1,31 @@
+.inner{
+  margin: 0;
+  margin-bottom: 30px;
+  background-color: rgb(255, 255, 255);
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &__info {
+    border: none;
+  }
+}
+
+@media (min-width: 660px) {
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &__info {
+      margin-bottom: 60px;
+      border: 2px solid rgb(229, 229, 229);
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

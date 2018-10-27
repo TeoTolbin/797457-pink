@@ -1,71 +1,122 @@
-/*.footer-form {
-  display: none;
-}*/
+.footer-form {
+  padding-top: 40px;
 
-.footer-form__filling {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 37px;
-}
-
-.footer-form__logo-svg {
-  margin-bottom: 31px;
-
-  &:hover path,
-  &:focus path {
-    fill: $decoration-color;
+  &--competition {
+    padding-top: 30px;
+    padding-left: 30px;
   }
 
-  &:active path {
-    fill: rgba($decoration-color, 0.3%);
+  &--photo {
+    padding-left: 30px;
   }
-}
 
-.footer-form__developer {
-  line-height: 18px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-
-@media (min-width: $tablet-width) {
-  /*.footer-form {
-    display: none;
-  }*/
-
-  .footer-form__filling {
+  &__filling {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    flex: 1;
+  }
+
+  &__bottom {
+    display: none;
+  }
+
+  &__logo-pink {
     margin-bottom: 35px;
-  }
 
-  .footer-form__logo-svg {
-    margin-bottom: 0;
-  }
+    &:nth-child(2) {
+      display: none;
+    }
 
-  .footer-form__developer {
-    margin-top: 0;
-    margin-left: auto;
+    &:hover path {
+      fill: rgb(210, 40, 86);
+    }
+
+    &:active {
+      opacity: 0.3;
+
+      & g path {
+        fill: rgb(40, 54, 69);
+      }
+    }
   }
 }
 
-@media (min-width: $desktop-width) {
-  /*.footer-form {
-    display: none;
-  }*/
+@media (min-width: 660px) {
+  .footer-form {
+    padding-top: 53px;
 
-  .footer-form__filling {
-    margin: 0 auto;
-    margin-top: 70px;
-    margin-bottom: 35px;
-    width: 940px;
+    &--competition {
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    &--photo {
+      padding-top: 15px;
+      padding-left: 20px;
+    }
+
+    &__filling {
+      padding-left: 47px;
+      padding-right: 31px;
+
+      &--photo {
+        padding-left: 0;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 0;
+      }
+
+      &--competition {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      padding-left: 20px;
+      padding-top: 0;
+      justify-content: space-between;
+    }
   }
+}
 
-  .footer-form__developer {
-    margin-top: 0;
-    margin-left: auto;
+@media (min-width: 960px) {
+  .footer-form {
+    padding-top: 64px;
+
+    &--photo {
+      padding-top: 67px;
+    }
+
+    &--competition {
+      padding-top: 30px;
+    }
+
+    &__filling {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__bottom {
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0;
+    }
+
+    &__logo-pink {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: block;
+        margin-right: 20px;
+      }
+    }
   }
 }

@@ -1,0 +1,40 @@
+.form-review {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+
+  &__legend {
+    line-height: 30px;
+    color: rgb(210, 40, 86);
+    text-transform: uppercase;
+    padding-left: 48px;
+  }
+}
+
+@media (min-width: 660px) {
+  .form-review {
+    order: 4;
+    padding-left: 60px;
+    margin-bottom: 68px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    &__legend {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .form-review {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 12px;
+    padding-bottom: 24px;
+
+    &__legend {
+      padding-left: 38px;
+      padding-right: 40px;
+    }
+  }
+}

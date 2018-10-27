@@ -1,0 +1,26 @@
+.store {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 38px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+
+  &__item {
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: 660px) {
+  .store {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 960px) {
+  .store {
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }
+}

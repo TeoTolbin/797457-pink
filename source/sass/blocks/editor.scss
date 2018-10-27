@@ -1,308 +1,71 @@
 .editor {
-  min-width: 320px;
-  margin: 0 auto;
-  margin-top: 40px;
-}
+  background-color: rgb(242, 242, 242);
+  margin-bottom: 5px;
 
-.editor__text {
-  margin: 0;
-  padding-bottom: 43px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 30px;
-  background-color: $header-txt-color;
-  text-align: center;
-}
-
-.editor__img {
-  margin: 0 auto;
-  display: block;
-  padding-top: 20px;
-}
-
-.editor-fieldset {
-  padding: 0;
-  padding-top: 5px;
-  border: none;
-  position: relative;
-  min-height: 120px;
-  border-bottom: 2px solid #dddfe0;
-}
-
-.editor__image {
-  width: 220px;
-  margin: 0 auto;
-
-  display: flex;
-}
-
-.image__tools {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  margin-right: 24px;
-
-  &:hover svg,
-  &:focus svg {
-    fill: rgba(#000000, 0.5);
+  &__text {
+    line-height: 30px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding-bottom: 45px;
+    padding-top: 20px;
   }
 
-  &--active svg {
-    fill: $decoration-color;
+  &__container-image {
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 280px;
+    height: 374px;
+    padding-top: 30px;
   }
 }
 
-.range-toggle__field {
-  position: absolute;
-  top: 90px;
-  left: 35px;
-  width: 240px;
-  border-radius: 2px;
-  height: 0;
-  outline: none;
-  border: 1px solid $main-color;
-  background-color: $main-color;
-}
-
-.range-toggle__field::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
-  background: $section-background;
-  border-radius: 15px;
-  border: 2px solid $decoration-color;
-  cursor: pointer;
-
-  &:hover,
-  &:active {
-    background-color: $decoration-color;
-  }
-}
-
-.form-wrapper {
-  width: 300px;
-  margin-top: 36px;
-}
-
-.editor__btns {
-  display: flex;
-  flex-direction: column;
-  margin-top: 37px;
-}
-
-.editor__btn {
-  background-color: transparent;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-  text-align: center;
-  border-radius: 27px;
-  padding: 15px 45px 16px 40px;
-  width: 280px;
-  margin: 0 auto;
-
-  &--submit {
-    border: 3px solid $decoration-color;
-    color: $decoration-color;
-    margin-bottom: 10px;
-
-    &:hover,
-    &:focus {
-      background-color: $decoration-color;
-      color: $header-txt-color;
-    }
-
-    &:active {
-      color: rgba($header-txt-color, 0.3%);
-    }
-  }
-}
-
-/*.editor__btn--submit {
-  border: 3px solid $decoration-color;
-  color: $decoration-color;
-  margin-bottom: 10px;
-
-  &:hover,
-  &:focus {
-    background-color: $decoration-color;
-    color: $header-txt-color;
-  }
-
-  &:active {
-    color: rgba($header-txt-color, 0.3%);
-  }
-}
-*/
-.editor__btn--reset {
-  border: 3px solid rgba($main-color, 0.1%);
-  color: rgba($main-color, 0.1%);
-  margin-bottom: 44px;
-
-  &:hover,
-  &:focus {
-    border: 3px solid rgba($main-color, 0.3%);
-    color: rgba($main-color, 0.3%);
-  }
-
-  &:active {
-    background: rgba($main-color, 0.3%);
-    border: 3px solid rgba($main-color, 0%);
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .editor__container {
-    padding: 0 20px;
-    background-color: $section-background;
-    display: flex;
-  }
-
-  .editor__text {
-    font-size: 18px;
-    padding-bottom: 65px;
-  }
-
-  .editor__img {
-    padding-top: 57px;
-  }
-
-  .image__tools {
-    display: none;
-  }
-
-  .form-wrapper {
-    margin-top: 35px;
-    margin-left: 25px;
-  }
-
-  .editor-fieldset {
-    margin: 0;
-    padding: 0;
-    border-bottom: none;
-  }
-
-  .range-toggle {
-    padding-left: 80px;
-    padding-bottom: 25px;
-    padding-top: 25px;
-    display: block;
-    border-bottom: 1px solid #dddfe0;
-
-    &--contrast {
-      content: "";
-      background-image: url("../img/icon-editor-contrast.svg");
-      background-repeat: no-repeat;
-      background-position: 30px 30px;
-      background-size: 18px 18px;
-    }
-
-    &--color {
-      content: "";
-      background-image: url("../img/icon-editor-crop.svg");
-      background-repeat: no-repeat;
-      background-position: 30px 30px;
-      background-size: 26px 22px;
-    }
-
-    &--brightness {
-      content: "";
-      background-image: url("../img/icon-editor-fill.svg");
-      background-repeat: no-repeat;
-      background-position: 30px 30px;
-      background-size: 24px 24px;
-    }
-  }
-
-  .range-toggle__field {
-    position: static;
-    border-radius: 2px;
-    width: 200px;
-    height: 0;
-    outline: none;
-    border: 1px solid $main-color;
-    background-color: $main-color;
-  }
-
-  .editor__btns {
-    display: flex;
-    flex-direction: column;
-    margin-top: 65px;
-  }
-
-  .editor__btn {
-    width: 260px;
-  }
-
-  .editor__btn--reset {
-    margin-bottom: 45px;
-    margin-top: 15px;
-  }
-}
-
-@media (min-width: $desktop-width) {
+@media (min-width: 660px) {
   .editor {
-    padding: 0 130px;
-    margin-top: 5px;
-  }
+    margin-bottom: 0;
 
-  .editor__form {
-    width: 420px;
-  }
-
-  .editor__container {
-    background-color: $section-background;
-    padding: 0;
-    margin-bottom: 100px;
-    display: flex;
-  }
-
-  .editor__img {
-    margin-left: 80px;
-  }
-
-  .range-toggle {
-    padding-left: 90px;
-
-    &--contrast {
-      background-position: 0 25px;
-      background-size: 32px 32px;
+    &__text {
+      font-size: 18px;
+      padding-bottom: 72px;
+      margin-top: -25px;
     }
 
-    &--color {
-      background-position: 0 15px;
-      background-size: 45px 49px;
+    &__container {
+      display: flex;
+      padding-top: 35px;
+      padding-bottom: 0;
     }
 
-    &--brightness {
-      background-position: 0 15px;
-      background-size: 47px 45px;
+    &__change-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__container-image {
+      margin-right: 47px;
+      width: 300px;
+      height: 400px;
+      padding-top: 0;
     }
   }
+}
 
-  .range-toggle__field {
-    width: 290px;
-  }
+@media (min-width: 960px) {
+  .editor {
+    padding-bottom: 0;
 
-  .editor__btns {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 410px;
-    margin-top: 140px;
-    margin-bottom: 60px;
-  }
+    &__text {
+      margin-top: -50px;
+      padding-bottom: 65px;
+      padding-left: 0;
+    }
 
-  .editor__btn {
-    width: 185px;
-  }
-
-  .editor__btn--reset,
-  .editor__btn--submit {
-    margin: 0;
-  }
-
-  .form-wrapper {
-    margin-left: 90px;
+    &__container-image {
+      padding-left: 74px;
+      margin-right: 90px;
+      margin-bottom: 0;
+      width: 300px;
+      height: 400px;
+    }
   }
 }

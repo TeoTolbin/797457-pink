@@ -1,382 +1,130 @@
-.main-header {
-  color: $header-txt-color;
-  background-color: #000000;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  min-width: 320px;
-}
-
-@media (min-resolution: $retina-dpi),
-  (min-resolution: $retina-dppx) {
+@media (min-width: 320px) {
   .main-header {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 640px 465px;
-  }
-}
+    padding: 0;
+    margin: 0;
 
-.main-header__menu {
-  background-color: $header-color;
-  display: flex;
-  flex-direction: column;
-}
+    &__description {
+      font-size: 24px;
+      font-weight: lighter;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding-top: 45px;
 
-.main-header__menu-wrapper {
-  position: relative;
-  display: block;
-  padding: 20px;
-}
+      &--photo {
+        margin-top: -10px;
+      }
 
-.main-header__logo:hover path,
-.main-header__logo:focus path {
-  fill: $decoration-color;
-}
-
-.main-header__logo:active path {
-  fill: rgba($decoration-color, 0.3%);
-}
-
-.main-header__menu--open .main-header__toggle-close {
-  position: absolute;
-  top: 18px;
-  right: 7px;
-  background-color: transparent;
-  border: none;
-  width: 50px;
-  height: 25px;
-  cursor: pointer;
-
-  &:hover path,
-  &:focus path {
-    fill: $decoration-color;
-  }
-
-  &:active path {
-    fill: rgba($decoration-color, 0.3%);
-  }
-}
-
-.main-header__menu--open .main-header__menu-wrapper {
-  background-color: $main-color;
-  border-bottom: 1px solid $title-color;
-  order: 1;
-}
-
-.main-header__menu--open .main-header__toggle-open {
-  display: none;
-}
-
-.main-nav {
-  order: 2;
-}
-
-.main-nav__list {
-  @include reset-list;
-  width: 320px;
-}
-
-.main-nav__item {
-  background-color: $main-color;
-}
-
-.main-nav__item a {
-  color: $header-txt-color;
-  font-size: 18px;
-  line-height: 32px;
-  text-transform: uppercase;
-  padding: 15px;
-  display: block;
-  border-top: 1px solid #485461;
-  border-bottom: 1px solid $title-color;
-  text-align: center;
-  font-weight: 700;
-}
-
-.main-nav__item a[href] {
-  &:hover,
-  &:focus {
-    color: $decoration-color;
-  }
-
-  &:active {
-    color: $decoration-color;
-    opacity: 0.3;
-  }
-}
-
-.download {
-  overflow: hidden;
-}
-
-.main-header__description {
-  max-height: 170px;
-}
-
-.main-header__description-headline,
-.download__headline {
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 300;
-}
-
-.main-header__description-headline {
-  width: 240px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 85px;
-}
-
-.download__headline {
-  display: none;
-}
-
-.download__image {
-  display: block;
-  padding-top: 110px;
-}
-
-.download-filling {
-  background-color: $main-color;
-  text-align: center;
-  padding-bottom: 30px;
-  padding-top: 45px;
-}
-
-.download__btn {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 18px;
-  color: $header-txt-color;
-  background-color: transparent;
-  border: 2px solid $header-txt-color;
-  border-radius: 28px;
-  cursor: pointer;
-  padding: 13px 36px;
-
-  &:hover {
-    background: $header-txt-color;
-    color: $decoration-color;
-  }
-
-  &:active {
-    color: rgba($decoration-color, 0.3%);
-  }
-}
-
-.download__list {
-  @include reset-list;
-  display: flex;
-  justify-content: space-between;
-  width: 205px;
-  align-items: baseline;
-  margin: 0 auto;
-  margin-top: 45px;
-}
-
-.download-section__description {
-  font-weight: 300;
-  width: 230px;
-  margin: 0 auto;
-  margin-top: 15px;
-}
-
-@media (min-width: $tablet-width) {
-  .main-header {
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: center bottom;
-  }
-
-  @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
-    .main-header {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
-      background-size: 1200px auto;
-    }
-  }
-
-  .main-header__menu--open .main-header__toggle-close {
-    top: 43px;
-  }
-
-  .main-header__menu-wrapper {
-    padding-top: 25px;
-    padding-bottom: 37px;
-  }
-
-  .download {
-    position: relative;
-    min-height: 620px;
-  }
-
-  .main-header__description {
-    min-height: 330px;
-  }
-
-  .download__headline {
-    display: block;
-    font-size: 40px;
-    line-height: 48px;
-    width: 200px;
-    position: absolute;
-    text-align: center;
-    top: 66px;
-    left: 70px;
-  }
-
-  .main-header__description-headline {
-    font-size: 50px;
-    line-height: 60px;
-    width: 490px;
-    padding-top: 70px;
-  }
-
-  .download-filling {
-    background-color: transparent;
-    position: absolute;
-    width: 300px;
-    top: 240px;
-    left: 20px;
-  }
-
-  .download__image {
-    position: absolute;
-    padding-top: 75px;
-    left: -20px;
-  }
-
-  .download__btn {
-    padding: 13px 46px;
-  }
-
-  .download__list {
-    margin-top: 57px;
-  }
-
-  .download-section__description {
-    font-size: 18px;
-    line-height: 24px;
-    margin-top: 31px;
-    width: auto;
-  }
-
-  .main-nav__list {
-    width: auto;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .main-header {
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-  }
-
-  @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
-    .main-header {
-      background-image: url("../img/bg-back-desktop@2x.jpg");
-      background-size: 2560px auto;
-    }
-  }
-
-  .main-nav__item {
-    background-color: transparent;
-    position: relative;
-
-    &--active {
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: -10px;
-        left: 0;
-        height: 2px;
-        background: $header-txt-color;
+      &--form {
+        padding-top: 40px;
+        line-height: 30px;
       }
     }
   }
+}
 
-  .main-nav__item a {
-    border: none;
-    text-transform: none;
-    font-weight: 300;
-    padding: 0;
+@media (min-width: 660px) {
+  .main-header {
+    &__app-all {
+      padding: 0;
+      background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
+      background-position: 50% 65%, 50% 50%;
+      background-repeat: no-repeat;
+      position: relative;
+      min-height: 660px;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../img/iphone-hand-tablet@2x.png"), url("../img/bg-back-tablet@2x.jpg");
+        background-size: 700px auto, 1200px auto;
+      }
+
+      &--photo {
+        background-image: url("../img/bg-back-tablet@1x.jpg");
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/bg-back-tablet@2x.jpg");
+          background-size: 1200px auto;
+        }
+      }
+
+      &--form {
+        background-image: url("../img/bg-back-tablet@1x.jpg");
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/bg-back-tablet@2x.jpg");
+          background-size: 1200px auto;
+        }
+      }
+    }
+
+    &__description {
+      font-size: 50px;
+      line-height: 50px;
+      padding-top: 65px;
+
+      &--photo {
+        padding-top: 85px;
+        line-height: 55px;
+      }
+
+      &--form {
+        padding-top: 80px;
+        line-height: 55px;
+      }
+    }
   }
+}
 
-  .main-header__toggle-close,
-  .main-header__toggle-open {
-    display: none;
-  }
+@media (min-width: 960px) {
+  .main-header {
+    margin: 0;
+    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
+    background-position: 0% 100%, 50% 50%;
+    background-repeat: no-repeat;
+    min-height: 852px;
 
-  .main-header__menu {
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-between;
-    background-color: $header-color;
-    align-items: center;
-    padding: 0 130px;
-  }
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+      background-size: 1050px auto, 2560px auto;
+    }
 
-  .main-header__menu--open .main-header__menu-wrapper {
-    background-color: transparent;
-    padding: 25px 0 35px 0;
-  }
+    &__app-all {
+      background-image: none;
 
-  .main-nav__list {
-    display: flex;
-    justify-content: space-between;
-    width: 620px;
-  }
+      &--photo {
+        background-image: url("../img/bg-back-desktop@1x.jpg");
+        background-position: 50% 20%;
 
-  .download-filling {
-    width: 340px;
-    background-color: transparent;
-    top: 315px;
-    left: 110px;
-  }
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/bg-back-desktop@2x.jpg");
+          background-size: 2560px auto;
+        }
+      }
 
-  .download__image {
-    padding-top: 100px;
-    left: 145px;
-  }
+      &--form {
+        background-image: url("../img/bg-back-desktop@1x.jpg");
+        background-position: 50% 40%;
 
-  .download__btn {
-    padding: 11px 30px;
-    font-size: 21px;
-  }
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+          background-image: url("../img/bg-back-desktop@2x.jpg");
+          background-size: 2560px auto;
+        }
+      }
+    }
 
-  .download__list {
-    margin-top: 81px;
-  }
+    &__description {
+      &--form {
+        padding-top: 80px;
+        width: 820px;
+        padding-left: 60px;
+        line-height: 60px;
+      }
 
-  .download-section__description {
-    font-size: 18px;
-    line-height: 24px;
-    margin-top: 45px;
-    width: auto;
-  }
-
-  .download {
-    padding: 0 120px;
-    min-height: 745px;
-  }
-
-  .main-header__description {
-    min-height: 285px;
-  }
-
-  .download__headline {
-    display: block;
-    font-size: 50px;
-    line-height: 60px;
-    width: 280px;
-    position: absolute;
-    top: 75px;
-    left: 140px;
-  }
-
-  .main-header__description-headline {
-    font-size: 50px;
-    line-height: 60px;
-    width: 760px;
+      &--photo {
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-top: -20px;
+        min-width: 400px;
+      }
+    }
   }
 }

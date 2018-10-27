@@ -1,0 +1,19 @@
+.slider {
+  &__item {
+    display: none;
+
+    &:first-child {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__btn {
+    position: relative;
+
+    input {
+      display: none;
+    }
+  }
+}

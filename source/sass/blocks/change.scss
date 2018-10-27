@@ -1,0 +1,133 @@
+.change {
+  &__btn {
+    font-size: 0;
+    border: 0;
+
+    &--size {
+      width: 44px;
+      height: 44px;
+      background-color: transparent;
+      stroke: none;
+    }
+
+    &--fill {
+      width: 48px;
+      height: 43px;
+      background-color: transparent;
+      border: none;
+    }
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+      background-color: transparent;
+      border: none;
+
+      & path {
+        fill: rgba(40, 54, 69, 0.3);
+      }
+
+      &:hover path {
+        fill: rgba(40, 54, 69, 0.5);
+      }
+
+      &:focus path {
+        fill: rgba(210, 40, 86, 1);
+      }
+    }
+
+    & path:nth-of-type(2) {
+      fill: rgba(40, 54, 69, 0.3);
+    }
+
+    & rect {
+      fill: rgba(40, 54, 69, 0.3);
+    }
+
+    &:hover rect {
+      fill: rgba(40, 54, 69, 0.5);
+    }
+
+    &:focus rect {
+      fill: rgba(210, 40, 86, 1);
+    }
+
+    &:hover path:nth-of-type(2) {
+      fill: rgba(40, 54, 69, 0.5);
+    }
+
+    &:focus path:nth-of-type(2) {
+      fill: rgba(210, 40, 86, 1);
+    }
+
+    &:focus + .range-toggle {
+      display: block;
+    }
+
+    &:not(:focus) + .range-toggle {
+      display: none;
+    }
+
+    &:focus ~ .range-toggle .toggle {
+      background-color: rgb(210, 40, 86);
+    }
+  }
+}
+
+@media (min-width: 660px) {
+  .change {
+    &__btn {
+      &:not(:focus) + .range-toggle {
+        display: block;
+      }
+
+      &--size svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      &--fill svg {
+        width: 24px;
+        height: 22px;
+      }
+
+      &--contrast svg {
+        width: 16px;
+        height: 16px;
+
+        & path {
+          fill: rgba(210, 40, 86, 1);
+        }
+      }
+
+      & path:nth-of-type(2) {
+        fill: rgba(210, 40, 86, 1);
+      }
+
+      & rect {
+        fill: rgba(210, 40, 86, 1);
+      }
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .change {
+    &__btn {
+      &--size svg {
+        width: 44px;
+        height: 44px;
+      }
+
+      &--fill svg {
+        width: 48px;
+        height: 43px;
+      }
+
+      &--contrast svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
