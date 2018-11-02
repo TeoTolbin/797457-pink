@@ -1,29 +1,86 @@
 .panorama {
-  display: inline-block;
-  position: absolute;
-  left: 160px;
-  min-width: 140px;
-  text-align: center;
-  box-sizing: border-box;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  background-color: rgb(210, 40, 86);
+  margin-bottom: 20px;
 }
 
-@media (min-width: 660px) {
+.panorama__filling {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.panorama__hit {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 7px 21px 5px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 2;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $pink;
+}
+
+.panorama__list {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 12px 22px 17px;
+  background-color: $lighter;
+}
+
+.panorama__photo img {
+  width: 320px;
+}
+
+@media (min-width: $tablet-width) {
+  .panorama__filling {
+    width: 700px;
+  }
+
   .panorama {
-    left: 500px;
-    top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .panorama__hit {
+    top: 57px;
+    right: 20px;
+  }
+
+  .panorama__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 620px;
+    padding: 25px 12px 15px 27px;
+    box-sizing: border-box;
+  }
+
+  .panorama__photo img {
+    width: 700px;
   }
 }
 
-@media (min-width: 960px) {
-  .panorama {
-    left: 797px;
-    top: 55px;
+@media (min-width: $desktop-width) {
+  .panorama__filling {
+    width: 1200px;
+  }
+
+  .panorama__hit {
+    top: 54px;
+    right: 130px;
+  }
+
+  .panorama__list {
+    width: 940px;
+  }
+
+  .panorama__photo img {
+    width: 1200px;
   }
 }

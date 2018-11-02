@@ -1,0 +1,48 @@
+.submit-btn {
+  padding: 15px 45px 14px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.67;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  background-color: #2aab6d;
+  border: 2px solid #2aab6d;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &--ok {
+    padding-left: 125px;
+    padding-right: 125px;
+  }
+
+  &--close {
+    padding-left: 66px;
+    padding-right: 66px;
+  }
+
+  &:hover {
+    background-color: #1c9b5e;
+    border-color: #1c9b5e;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #1c9b5e;
+    border-color: #1c9b5e;
+  }
+
+  &:disabled {
+    background-color: $grey;
+    border-color: $grey;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .submit-button {
+    &--submit {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+  }
+}

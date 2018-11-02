@@ -1,0 +1,279 @@
+.photo-change {
+  background-color: $lighter;
+}
+
+.photo-change__all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-change__photo {
+  flex-shrink: 0;
+  width: 280px;
+  margin-bottom: 42px;
+  padding-top: 20px;
+}
+
+.photo-change__manage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-change__edit-all {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.photo__change-input {
+  display: none;
+}
+
+.photo__change-radio {
+  margin-left: 20px;
+  margin-right: 22px;
+
+  &--fill,
+  &--contrast {
+    margin-top: 5px;
+  }
+}
+
+.photo-change__toggle {
+  border: none;
+
+  &--size svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  &--fill svg {
+    width: 48px;
+    height: 43px;
+  }
+
+  &--contrast {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.photo-change__btn {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 41px;
+}
+
+.photo-change__send {
+  margin-bottom: 12px;
+  color: $pink;
+  border-color: $pink;
+
+  &:hover {
+    color: $white;
+    background-color: $pink;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $pink;
+  }
+}
+
+.photo-change__cancel {
+  color: rgba(40, 54, 69, 0.1);
+  border-color: rgba(40, 54, 69, 0.1);
+
+  &:hover {
+    color: rgba(40, 54, 69, 0.3);
+    border-color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $dark;
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $totablet-width) {
+  .photo-change__toggle {
+    cursor: pointer;
+  }
+
+  .photo-change__range .photo__change-input {
+    &:not(:checked) + .photo-change__toggle svg {
+      fill: $darker;
+      opacity: 0.3;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &:not(:checked) + .photo-change__toggle--contrast svg path {
+      fill: $darker;
+    }
+  }
+
+  .photo__change-bar {
+    position: absolute;
+    top: 70%;
+    right: 50%;
+    transform: translateX(50%);
+
+    &:not(.photo__change-bar--active) {
+      display: none;
+    }
+  }
+
+  .photo-change__edit-all {
+    position: relative;
+    height: 85px;
+  }
+
+  .photo-change__btn {
+    padding-top: 38px;
+    border-top: 1px solid rgba(40, 54, 69, 0.1);
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $todesktop-width) {
+  .photo-change__toggle {
+    margin-left: 10px;
+    margin-right: 15px;
+
+    &--size svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--fill svg {
+      width: 24px;
+      height: 22px;
+    }
+
+    &--contrast svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .photo-change__all {
+    flex-direction: row;
+  }
+
+  .photo-change__photo {
+    width: 300px;
+    margin-right: 40px;
+    margin-bottom: 0;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  .photo-change__manage {
+    justify-content: space-between;
+  }
+
+  .photo-change__edit-all {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 65px;
+  }
+
+  .photo__change-radio {
+    margin-left: 0;
+    margin-right: 0;
+
+    &--fill,
+    &--contrast {
+      margin-top: 0;
+    }
+  }
+
+  .photo-change__range {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 275px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(40, 54, 69, 0.1);
+  }
+
+  .photo-change__btn {
+    margin-bottom: 0;
+  }
+
+  .photo-change__send {
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo-change__all {
+    align-items: flex-start;
+    padding: 0;
+    background-color: $lighter;
+  }
+
+  .photo-change {
+    background-color: transparent;
+  }
+
+  .photo-change__photo {
+    margin-left: 80px;
+    margin-right: 90px;
+    margin-bottom: 0;
+    padding-bottom: 57px;
+  }
+
+  .photo-change__manage {
+    padding-top: 40px;
+  }
+
+  .photo-change__edit-all {
+    margin-bottom: 145px;
+  }
+
+  .photo-change__toggle {
+    margin: 6px 40px 24px 0;
+
+    &--contrast {
+      margin-bottom: 0;
+    }
+  }
+
+  .photo-change__range {
+    width: 410px;
+    height: 72px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+
+  .photo-change__btn {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo-change__send {
+    min-width: 183px;
+    margin-right: 44px;
+    margin-bottom: 0;
+  }
+
+  .photo-change__cancel {
+    min-width: 183px;
+    color: rgba(40, 54, 69, 0.1);
+    border-color: rgba(40, 54, 69, 0.1);
+  }
+}

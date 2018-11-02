@@ -1,0 +1,13 @@
+.photo-all__list {
+  @include reset-list();
+}
+
+@media (min-width: $tablet-width) {
+  .photo-all__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

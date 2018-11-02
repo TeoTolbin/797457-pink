@@ -1,19 +1,76 @@
-.slider {
-  &__item {
-    display: none;
+.slider__toggle {
+  margin-right: 19px;
 
-    &:first-child {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
+  &:last-child {
+    margin-right: 0;
   }
 
-  &__btn {
-    position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: $darker;
+    opacity: 0.3;
+    border-radius: 50%;
+  }
 
-    input {
-      display: none;
-    }
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+}
+
+.slider input {
+  display: none;
+}
+
+.slider__btn1:checked ~ .feedback__all label[for="slider__btn-1"]::before,
+.slider__btn2:checked ~ .feedback__all label[for="slider__btn-2"]::before,
+.slider__btn3:checked ~ .feedback__all label[for="slider__btn-3"]::before {
+  background-color: $white;
+  border: 3px solid $darker;
+  opacity: 1;
+}
+
+.slider__item {
+  display: none;
+}
+
+.slider__btn1:checked ~ .feedback__all .slider__item--1,
+.slider__btn2:checked ~ .feedback__all .slider__item--2,
+.slider__btn2:checked ~ .feedback__all .slider__item--3 {
+  display: block;
+}
+
+.slider__rates1:checked ~ .rates-all label[for="rates-1"]::before,
+.slider__rates2:checked ~ .rates-all label[for="rates-2"]::before,
+.slider__rates3:checked ~ .rates-all label[for="rates-3"]::before {
+  background-color: $white;
+  border: 3px solid $darker;
+  opacity: 1;
+}
+
+.slider__rates1:checked ~ .rates-all .rates__table {
+  left: 135%;
+}
+
+.slider__rates2:checked ~ .rates-all .rates__table {
+  left: 50%;
+}
+
+.slider__rates3:checked ~ .rates-all .rates__table {
+  left: -35%;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__btn1:checked ~ .feedback__all .slider__item--1,
+  .slider__btn2:checked ~ .feedback__all .slider__item--2,
+  .slider__btn3:checked ~ .feedback__all .slider__item--3 {
+    display: flex;
+    flex-direction: column;
   }
 }

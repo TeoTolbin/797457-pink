@@ -2,43 +2,82 @@
   display: none;
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .effect {
     display: block;
-    padding-top: 16px;
-    min-height: 356px;
-    background-image: url("../img/icon-timer.svg");
-    background-position: 5% 7%;
-    background-repeat: no-repeat;
-    text-align: left;
-    padding-left: 330px;
+  }
 
-    &__headline {
-      font-size: 30px;
-      line-height: 36px;
-      color: rgb(0, 0, 0);
-      padding-right: 0;
-      margin-bottom: -8px;
+  .effect__all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .effect__hour {
+    margin-top: 59px;
+    margin-bottom: 52px;
+    margin-right: 70px;
+    padding: 80px 66px 61px;
+    font-size: 96px;
+    font-weight: bold;
+    line-height: 1.56;
+    text-align: center;
+    color: $pink;
+    background: url("../img/icon-diagram-fill.svg") no-repeat 52% 68%, url("../img/icon-timer.svg") no-repeat;
+    background-size: 203px, contain;
+  }
+
+  .effect__headline {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-right: 141px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    color: $black;
+  }
+
+  .effect__text {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.71;
+    text-align: left;
+    color: $darker;
+
+    &--link {
+      color: $pink;
     }
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: $desktop-width) {
   .effect {
-    background-color: rgb(242, 242, 242);
-    padding-left: 390px;
-    padding-right: 50px;
-    padding-top: 78px;
-    background-position: 3% 22%;
-    background-size: 298px 345px;
-    padding-bottom: 110px;
+    background-color: $lighter;
+  }
 
-    &__headline {
-      margin-bottom: 2px;
+  .effect__hour {
+    margin-top: 0;
+    margin-right: 60px;
+    padding: 95px 84px 75px;
+    font-size: 120px;
+    background: url("../img/icon-diagram-fill.svg") no-repeat 52% 67%, url("../img/icon-timer.svg") no-repeat;
+    background-size: 247px, contain;
+  }
 
-      & br {
-        display: none;
-      }
-    }
+  .effect__headline {
+    margin-top: -20px;
+    margin-bottom: 30px;
+    padding-right: 0;
+    line-height: 1;
+  }
+
+  .effect__text {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.67;
   }
 }

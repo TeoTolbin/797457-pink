@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  line-height: 0;
 }
 
 * {
@@ -15,24 +16,20 @@ html {
 }
 
 body {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.71;
-  margin: 0;
-  padding: 0;
-  color: $main-color;
-  background-color: rgb(255, 255, 255);
-  box-sizing: border-box;
+  position: relative;
   min-width: $mobile-width;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+  padding: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: $white;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  line-height: 0;
 }

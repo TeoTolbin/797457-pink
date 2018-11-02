@@ -1,44 +1,48 @@
 .developer {
-  padding-bottom: 40px;
   display: flex;
-  align-items: center;
+}
 
-  &__signature {
-    line-height: 18px;
-    margin-right: 3px;
+.developer__signature {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  text-align: left;
+  color: $darker;
+}
+
+.developer__logo {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.developer__logo svg {
+  width: 27px;
+  height: 34px;
+
+  &:hover {
+    fill: $darker;
   }
 
-  &__logo {
-    & path {
-      fill: rgb(210, 40, 86);
-    }
-
-    &:hover path {
-      fill: rgb(40, 54, 69);
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.1;
   }
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .developer {
-    padding-top: 10px;
+    padding-bottom: 0;
+  }
 
-    &__signature {
-      margin-right: 6px;
-    }
+  .developer__logo {
+    margin-left: 10px;
   }
 }
 
-@media (min-width: 960px) {
-  .developer {
-    padding-top: 15px;
-
-    &__signature {
-      font-size: 18px;
-    }
+@media (min-width: $desktop-width) {
+  .developer__signature {
+    font-size: 18px;
+    line-height: 1;
   }
 }

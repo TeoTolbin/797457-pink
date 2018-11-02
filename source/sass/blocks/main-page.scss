@@ -1,11 +1,92 @@
 .main-page {
-  padding: 0;
-  padding-top: 46px;
-  margin: 0;
+  position: relative;
 }
 
-@media (min-width: 660px) {
-  .main-page {
-    padding-top: 0;
+.main-page__description {
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 2.14;
+  text-align: center;
+  color: $darker;
+
+  &--photo {
+    padding-top: 45px;
+  }
+
+  &--add-photo {
+    display: block;
+    padding-bottom: 52px;
+  }
+
+  &--bottom {
+    padding: 41px 0 44px;
+
+    &:first-child {
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      padding-top: 0;
+    }
+  }
+
+  &--form {
+    padding: 45px 0 37px;
+  }
+}
+
+@media (max-width: $totablet-width) {
+  .main-page__description {
+    &--add-form {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $todesktop-width) {
+  .main-page__description {
+    &--add-photo {
+      display: inline;
+    }
+
+    &--photo {
+      padding: 93px 25px 75px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-page__description {
+    font-size: 18px;
+    line-height: 1.67;
+
+    &--bottom {
+      padding: 48px 0 66px;
+    }
+
+    &--form {
+      padding: 93px 65px 70px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-page__description {
+    &--add-photo {
+      padding-bottom: 87px;
+    }
+
+    &--photo {
+      padding-top: 92px;
+    }
+
+    &--bottom {
+      padding: 5px 0 66px;
+    }
+
+    &--form {
+      padding: 93px 75px 66px;
+    }
   }
 }

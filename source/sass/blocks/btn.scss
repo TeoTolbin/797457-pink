@@ -1,166 +1,23 @@
 .btn {
+  min-width: 280px;
+  padding-top: 17px;
+  padding-bottom: 14px;
   font-size: 18px;
   font-weight: bold;
-  line-height: 18px;
-  color: rgb(255, 255, 255);
-  border: 3px solid rgb(255, 255, 255);
-  border-radius: 40px;
-  display: inline-block;
-  vertical-align: middle;
+  line-height: 1;
   text-align: center;
-  min-width: 276px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  &--download {
-    margin-bottom: 30px;
-
-    &:hover {
-      box-shadow: 0 5px 7px 0 rgba(1, 1, 1, 0.75);
-      background-color: rgb(255, 255, 255);
-      color: rgb(210, 40, 86);
-    }
-
-    &:active {
-      box-shadow: none;
-      background-color: rgb(255, 255, 255);
-      color: rgba(210, 40, 86, 0.3);
-    }
-  }
-
-  &--submit {
-    border-color: rgb(210, 40, 86);
-    color: rgb(210, 40, 86);
-    margin-bottom: 12px;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    &:hover {
-      background-color: rgb(210, 40, 86);
-      color: rgb(255, 255, 255);
-    }
-
-    &:active {
-      background-color: rgb(210, 40, 86);
-      color: rgba(255, 255, 255, 0.3);
-    }
-  }
-
-  &--reset {
-    opacity: 0.1;
-    border-color: rgb(40, 54, 69);
-    color: rgb(40, 54, 69);
-    margin-left: 20px;
-    margin-right: 20px;
-
-    &:hover {
-      opacity: 0.3;
-    }
-
-    &:active {
-      opacity: 0.3;
-      background-color: rgb(40, 54, 69);
-      color: rgba(255, 255, 255, 0.3);
-    }
-  }
-
-  &--action,
-  &--ok,
-  &--close {
-    border-radius: 0;
-    background-color: rgb(42, 171, 109);
-    border: 2px solid rgb(42, 171, 109);
-    min-width: 279px;
-    text-transform: uppercase;
-    line-height: 30px;
-
-    &:hover {
-      border: 2px solid rgb(28, 155, 94);
-      background-color: rgb(28, 155, 94);
-    }
-
-    &:active {
-      border: 2px solid rgb(28, 155, 94);
-      background-color: rgb(28, 155, 94);
-      color: rgba(255, 255, 255, 0.3);
-    }
-
-    &:disabled {
-      border: 2px solid rgb(229, 229, 229);
-      background-color: rgb(229, 229, 229);
-    }
-  }
-
-  &--action {
-    margin-bottom: 5px;
-  }
+  border: 3px solid $white;
+  border-radius: 55px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
-@media (min-width: 660px) {
+@media (min-width: $tablet-width) {
   .btn {
-    &--action {
-      order: 5;
-      width: 296px;
-    }
+    min-width: 300px;
 
-    &--download {
-      margin-bottom: 47px;
-    }
-
-    &--submit {
+    &--uploader {
       min-width: 260px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      margin-right: 25px;
-      margin-bottom: 25px;
-    }
-
-    &--reset {
-      min-width: 260px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      margin-right: 25px;
-      margin-bottom: 25px;
-    }
-  }
-}
-
-@media (min-width: 960px) {
-  .btn {
-    &--download {
-      margin-left: 20px;
-      margin-top: 70px;
-      margin-bottom: 70px;
-      min-width: 292px;
-      font-size: 21px;
-      line-height: 18px;
-    }
-
-    &--close {
-      width: 456px;
-    }
-
-    &--submit {
-      box-sizing: border-box;
-      width: 183px;
-      height: 55px;
-      padding-left: 45px;
-      padding-right: 40px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      margin-right: 44px;
-      margin-bottom: 0;
-    }
-
-    &--reset {
-      box-sizing: border-box;
-      min-width: 183px;
-      height: 55px;
-      padding-left: 45px;
-      padding-right: 40px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      margin-bottom: 0;
     }
   }
 }
