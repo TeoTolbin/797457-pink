@@ -52,11 +52,26 @@
   text-align: left;
   text-transform: uppercase;
   color: $pink;
-  background: url("../img/icon-heart.svg") no-repeat 0 50%;
 }
 
 .posts-list__like-number {
   padding-left: 0;
+}
+
+.posts-list__link {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 12px;
+    background: url("../img/icon-heart.svg") no-repeat 0 50%;
+  }
 }
 
 @media (min-width: $tablet-width) {

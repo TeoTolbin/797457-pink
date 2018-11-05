@@ -84,18 +84,6 @@
           </ul>
         </div>
       </nav>
-      <div class="main-header__image">
-        <div class="container">
-          <picture class="main-header__picture-img">
-            <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@2x.png 2x, img/iphone-hand-desktop@1x.png 1x">
-            <source media="(min-width: 660px)" srcset=" img/iphone-hand-tablet@2x.png 2x, img/iphone-hand-tablet@1x.png 1x">
-            <img srcset="img/iphone-hand-mobile@2x.png 2x" src="img/iphone-hand-mobile@1x.png" alt="Рука">
-          </picture>
-        </div>
-      </div>
-    </header>
-
-    <main class="main-page">
       <div class="download">
         <div class="container">
           <div class="download__all">
@@ -118,6 +106,19 @@
           </div>
         </div>
       </div>
+      <div class="main-header__image">
+        <div class="container">
+          <picture class="main-header__picture-img">
+            <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@2x.png 2x, img/iphone-hand-desktop@1x.png 1x">
+            <source media="(min-width: 660px)" srcset=" img/iphone-hand-tablet@2x.png 2x, img/iphone-hand-tablet@1x.png 1x">
+            <img srcset="img/iphone-hand-mobile@2x.png 2x" src="img/iphone-hand-mobile@1x.png" alt="Рука">
+          </picture>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-page">
+
       <div class="header-pink container">
         <p class="header-pink__question-offer">Устали от серости мегаполиса?</p>
         <p class="header-pink__question-offer">Нам есть, что вам предложить!</p>
@@ -213,7 +214,7 @@
         <input class="slider__rates1" type="radio" name="rates"id="rates-1">
         <input class="slider__rates2" type="radio" name="rates" id="rates-2" checked>
         <input class="slider__rates3" type="radio" name="rates" id="rates-3">
-        <div class="rates-all">
+        <div class="rates-all price">
           <div class="rates__filling">
             <h2 class="visually-hidden">Тарифы приложения</h2>
             <table class="rates__table">
@@ -406,5 +407,6 @@
       </div>
     </footer>
 
+    <script src="js/open-nav.js"></script>
   </body>
 </html>
