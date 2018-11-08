@@ -1,0 +1,28 @@
+.feedback__wrapper {
+  @include container($mobile-width);
+}
+
+.feedback__list {
+  @include reset-list();
+}
+
+.feedback__toggles {
+  text-align: center;
+  padding-top: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    padding-bottom: 0;
+  }
+
+  .feedback__wrapper {
+    @include container($tablet-width);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__wrapper {
+    @include container($desktop-width, 0px);
+  }
+}

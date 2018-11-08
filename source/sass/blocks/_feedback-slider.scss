@@ -1,0 +1,152 @@
+.feedback-slider {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.feedback-slider__list {
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
+
+.feedback-slider__item {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.feedback-slider__radio {
+  display: none;
+}
+
+.feedback-slider__tab1:checked ~ .feedback-slider__list {
+  transform: translateX(0);
+}
+
+.feedback-slider__tab2:checked ~ .feedback-slider__list {
+  transform: translateX(-100%);
+}
+
+.feedback-slider__tab3:checked ~ .feedback-slider__list {
+  transform: translateX(-200%);
+}
+
+.feedback-slider__toggles {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.feedback-slider__toggle {
+  position: relative;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 7px;
+  background-color: fade($darker, 30);
+  border: 3px solid $white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: fade($darker, 60);
+  }
+
+  &:active {
+    background-color: fade($darker, 10);
+  }
+}
+
+.feedback-slider__tab1:focus ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-1"],
+.feedback-slider__tab2:focus ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-2"],
+.feedback-slider__tab3:focus ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-3"] {
+  background-color: fade($darker, 60);
+}
+
+.feedback-slider__tab1:active ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-1"],
+.feedback-slider__tab2:active ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-2"],
+.feedback-slider__tab3:active ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-3"] {
+  background-color: fade($darker, 10);
+}
+
+.feedback-slider__tab1:checked ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-1"],
+.feedback-slider__tab2:checked ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-2"],
+.feedback-slider__tab3:checked ~ .feedback-slider__toggles > .feedback-slider__toggle[for="slider__btn-3"] {
+  background-color: transparent;
+  border-color: $darker;
+}
+
+.feedback-slider__left,
+.feedback-slider__right {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback-slider__item {
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback-slider {
+    position: relative;
+    margin-bottom: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 55px;
+      left: calc(50% - 38px);
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/icon-quotes.svg");
+      @include background();
+    }
+  }
+
+  .feedback-slider__list {
+    padding-top: 166px;
+  }
+
+  .feedback-slider__item {
+    margin-bottom: 35px;
+  }
+
+  .feedback-slider__toggles {
+    display: none;
+  }
+
+  .feedback-slider__left,
+  .feedback-slider__right {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50px;
+    height: 100%;
+    @include reset-button();
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .feedback-slider__left {
+    left: 0;
+    background-image: url("../img/icon-review-arrow-left.svg");
+    @include background(35%, calc(50% + 15px), auto);
+  }
+
+  .feedback-slider__right {
+    right: 0;
+    background-image: url("../img/icon-review-arrow-right.svg");
+    @include background(65%, calc(50% + 15px), auto);
+  }
+}

@@ -1,0 +1,184 @@
+.photo {
+  margin: 0 0 21px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 137px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.photo__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 137px;
+  object-fit: cover;
+  background-color: $gray;
+}
+
+.photo__wrapper {
+  @include container($mobile-width);
+}
+
+.photo__day {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 5px 20px 7px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  background-color: $pink;
+}
+
+.photo__content {
+  min-height: 120px;
+  padding: 17px 17px 19px 17px;
+  background-color: $lighter;
+
+  &--special {
+    padding-bottom: 20px;
+  }
+}
+
+.photo__author {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+.photo__time {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.photo__comment {
+  margin: 0;
+  font-size: 14px;
+}
+
+.photo__likes {
+  align-self: flex-end;
+}
+
+@media (min-width: $tablet-width) {
+  .photo {
+    width: 300px;
+
+    &--special {
+      width: 100%;
+    }
+  }
+
+  .photo--special .likes {
+    margin: 0;
+  }
+
+  .photo--special .likes__btn {
+    right: 2px;
+  }
+
+  .photo__wrapper {
+    @include container($tablet-width);
+  }
+
+  .photo__day {
+    top: 57px;
+  }
+
+  .photo__author {
+    flex-basis: 100%;
+  }
+
+  .photo__content {
+    padding: 23px 26px 22px 27px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .photo--special .photo__content {
+    margin-bottom: 30px;
+    flex-direction: row;
+  }
+
+  .photo__image {
+    height: 300px;
+  }
+
+  .photo--special .photo__image {
+    min-height: 510px;
+  }
+
+  .photo:not(.photo--special) .photo__likes {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .photo:not(.photo--special) .photo__comment {
+    min-height: 55px;
+  }
+
+  .photo--special .photo__comment {
+    order: 3;
+    flex-basis: 100%;
+    padding: 0;
+  }
+
+  .photo--special .photo__likes {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo {
+    margin: 21px 0 35px 0;
+
+    &--special {
+      margin: 0;
+    }
+  }
+
+  .photo__link {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .photo__wrapper {
+    @include container($desktop-width, 10px);
+  }
+
+  .photo__image {
+    height: 400px;
+  }
+
+  .photo__day {
+    top: 52px;
+    right: 10px;
+  }
+
+  .photo--special .photo__content {
+    min-height: auto;
+    padding-right: 30px;
+  }
+
+  .photo--special .photo__image {
+    min-height: 505px;
+  }
+}

@@ -1,0 +1,210 @@
+.editor__wrapper {
+  @include container($mobile-width);
+}
+
+.editor__header {
+  padding-bottom: 44px;
+}
+
+.editor__title {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $darker;
+  text-align: center;
+  background-color: $white;
+}
+
+.editor__form {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  background-color: $lighter;
+}
+
+.editor__picture {
+  border: none;
+  width: 280px;
+  min-height: 280px;
+  margin: 0;
+  padding: 0;
+  background-color: $gray;
+  overflow: hidden;
+}
+
+.editor__download {
+  display: block;
+  width: auto;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.editor__filters {
+  position: relative;
+  border: none;
+  padding-top: 40px;
+}
+
+.editor__send {
+  position: relative;
+  padding-top: 38px;
+  padding-bottom: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: $desktop-width;
+    border-bottom: 1px solid $border;
+  }
+}
+
+.editor__btn {
+  width: 100%;
+  padding: 13px 12px 15px 12px;
+  font-weight: 700;
+
+  &--submit {
+    margin-bottom: 12px;
+    color: $pink;
+    border-color: $pink;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $pink;
+    }
+
+    &:active {
+      color: fade($white, 30);
+      background-color: $pink;
+    }
+  }
+
+  &--cansel {
+    margin-bottom: 12px;
+    color: fade($darker, 10);
+    border-color: fade($darker, 10);
+
+    &:hover,
+    &:focus {
+      color: fade($darker, 30);
+      border-color: fade($darker, 30);
+    }
+
+    &:active {
+      color: fade($white, 30);
+      border-color: fade($darker, 0);
+      background-color: fade($darker, 30);
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .editor__form {
+    padding-top: 55px;
+    padding-bottom: 53px;
+  }
+
+  .editor__wrapper {
+    @include container($tablet-width);
+  }
+
+  .editor__header {
+    padding-bottom: 70px;
+  }
+
+  .editor__title {
+    font-size: 18px;
+  }
+
+  .editor__coordinates {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .editor__picture,
+  .editor__filters {
+    flex-basis: 300px;
+    width: 300px;
+  }
+
+  .editor__send {
+    padding-top: 50px;
+    padding-bottom: 0;
+
+    &::before {
+      border-bottom: 1px solid transparent;
+    }
+  }
+
+  .editor__btn {
+    width: 260px;
+  }
+
+  .editor__btn--submit {
+    margin-bottom: 28px;
+  }
+
+  .editor__btn--cansel {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .editor__wrapper {
+    @include container($desktop-width);
+  }
+
+  .editor__header {
+    padding-top: 25px;
+    padding-bottom: 65px;
+  }
+
+  .editor__form {
+    @include container(calc($desktop-width - 20px), 0);
+    padding-top: 56px;
+    padding-bottom: 60px;
+  }
+
+  .editor__coordinates {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .editor__picture {
+    min-height: 400px;
+  }
+
+  .editor__download {
+    width: 100%;
+    height: auto;
+  }
+
+  .editor__filters {
+    flex-basis: 410px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 410px;
+  }
+
+  .editor__send {
+    margin-top: auto;
+    flex-grow: 0;
+    padding: 0;
+  }
+
+  .editor__btn--submit {
+    margin-bottom: 0;
+  }
+
+  .editor__post {
+    margin: 0;
+  }
+}

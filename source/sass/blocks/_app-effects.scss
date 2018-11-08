@@ -1,0 +1,181 @@
+.app-effects {
+  overflow: hidden;
+}
+
+.app-effects__wrapper {
+  @include container($mobile-width);
+}
+
+.app-effects__wrapper-tablet {
+  padding-bottom: 283px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    @include background(50%, calc(100% + 42px), 160px 320px);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-screen-mobile@2x.png");
+      @include background(50%, calc(100% + 42px), 160px 320px);
+    }
+  }
+}
+
+.app-effects__content {
+  position: relative;
+
+  @include reset-list();
+  padding-top: 73px;
+  background-color: $lighter;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 10vw solid $white;
+    border-right: 100vw solid transparent;
+  }
+}
+
+.app-effects__list {
+  margin-bottom: 15px;
+}
+
+.app-effects__main-picture {
+  position: relative;
+}
+
+.app-effects__image {
+  display: block;
+  margin: 0 auto -35px auto;
+}
+
+.app-effects__title {
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: center;
+  color: $darker;
+}
+
+@media (min-width: $tablet-width) {
+  .app-effects {
+    padding-top: 50px;
+  }
+
+  .app-effects__wrapper {
+    @include container($tablet-width);
+  }
+
+  .app-effects__wrapper-tablet {
+    @include container($tablet-width);
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
+      @include background(20px, 15px, 268px auto);
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      }
+    }
+  }
+
+  .app-effects__list {
+    flex-basis: 50%;
+    padding-top: 75px;
+    padding-bottom: 20px;
+    order: 2;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .app-effects__content {
+    margin-top: 35px;
+    padding-top: 0;
+  }
+
+  .app-effects__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 48px;
+
+    & + & {
+      width: 80%;
+    }
+  }
+
+  .app-effects__main-picture {
+    flex-basis: 50%;
+    order: 0;
+    margin: 0;
+  }
+
+  .app-effects__image {
+    margin: 15px 0 -15px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .app-effects {
+    padding-top: 67px;
+  }
+
+  .app-effects__wrapper {
+    @include container($desktop-width);
+  }
+
+  .app-effects__wrapper-tablet {
+    @include container($desktop-width);
+
+    &::after {
+      background-image: none;
+    }
+  }
+
+  .app-effects__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 50px;
+    line-height: 60px;
+
+    & + & {
+      width: 60%;
+    }
+  }
+
+  .app-effects__list {
+    flex-basis: 100%;
+    margin: 0;
+    padding-top: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

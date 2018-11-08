@@ -3,14 +3,8 @@ html {
   line-height: 0;
 }
 
-* {
-  box-sizing: inherit;
-}
-
-*::before {
-  box-sizing: inherit;
-}
-
+*,
+*::before,
 *::after {
   box-sizing: inherit;
 }
@@ -25,7 +19,8 @@ body {
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
-  color: $white;
+  color: $black;
+  background-color: $white;
 }
 
 img {

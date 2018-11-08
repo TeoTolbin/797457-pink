@@ -1,0 +1,213 @@
+.main-header {
+  box-sizing: border-box;
+  background-color: #2c3949;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  @include background(50%, 0%, cover);
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+}
+
+.photoform-page .main-header {
+  @include background(50%, 0%, cover);
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @include background(50%, 3%, 225%);
+  }
+}
+
+.main-header__up {
+  background-color: fade($black, 30%);
+
+  &--open {
+    background-color: $darker;
+    border-color: $black;
+  }
+}
+
+.main-header__wrapper {
+  @include container($mobile-width);
+}
+
+.main-header__logo {
+  display: block;
+  margin: 0;
+  padding: 21px 20px 15px 0;
+  @include reset-list();
+
+  outline: none;
+}
+
+.main-header__btn {
+  position: absolute;
+  top: 6px;
+  right: 17px;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 50px;
+  background: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 17px;
+    width: 50px;
+    height: 4px;
+    background-color: $white;
+    box-shadow: 0 10px 0 0 $white, 0 20px 0 0 $white;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: $pink;
+    box-shadow: 0 10px 0 0 $pink, 0 20px 0 0 $pink;
+  }
+
+  &:active::before {
+    background-color: fade($pink, 30);
+    box-shadow: 0 10px 0 0 fade($pink, 30), 0 20px 0 0 fade($pink, 30);
+  }
+
+  &--open {
+    &::before {
+      top: 25px;
+      left: 40px;
+      width: 30px;
+      transform: rotate(-45deg);
+      background-color: $white;
+      box-shadow: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 40px;
+      width: 30px;
+      height: 5px;
+      transform: rotate(45deg);
+      background-color: $white;
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: $pink;
+      box-shadow: none;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade($pink, 30);
+      box-shadow: none;
+    }
+  }
+}
+
+.main-header__logo:hover .logo-svg,
+.main-header__logo:focus .logo-svg {
+  fill: $pink;
+}
+
+.main-header__logo:active .logo-svg {
+  fill: fade($white, 30);
+}
+
+.main-header__nav {
+  display: none;
+
+  &--open {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: -2px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .photoform-page .main-header {
+    @include background(50%, 0%, 180% auto);
+  }
+
+  .main-header {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  .main-header__nav--open {
+    margin-top: 0;
+  }
+
+  .main-header__wrapper {
+    @include container($tablet-width);
+  }
+
+  .main-header__logo {
+    padding: 27px 20px 38px 0;
+  }
+
+  .main-header__btn {
+    top: 28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photoform-page .main-header {
+    @include background(50%, 0%, 213% auto);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      @include background(50%, 10px, 213% auto);
+    }
+  }
+
+  .main-header {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  .main-header__up--open {
+    background-color: fade($black, 30%);
+    border-color: transparent;
+  }
+
+  .main-header__wrapper {
+    @include reset-container();
+  }
+
+  .main-header__main-wrapper {
+    @include container($desktop-width, 10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .main-header__logo {
+    padding: 28px 20px 35px 0;
+  }
+
+  .main-header__btn {
+    display: none;
+  }
+
+  .main-header__nav {
+    display: block;
+    width: auto;
+
+    &--open {
+      margin: 0;
+    }
+  }
+}

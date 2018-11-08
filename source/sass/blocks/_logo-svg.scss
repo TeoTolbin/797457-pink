@@ -1,0 +1,36 @@
+.logo-svg {
+  fill: $white;
+  margin: -17px 0 0 -72px;
+}
+
+.logo-svg__desktop {
+  fill: $pink;
+}
+
+.logo-svg__desktop-glass,
+.logo-svg__desktop,
+.logo-svg__tablet {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .logo-svg {
+    fill: $white;
+    margin: 0;
+  }
+
+  .logo-svg__tablet {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo-svg__tablet {
+    display: none;
+  }
+
+  .logo-svg__desktop,
+  .logo-svg__desktop-glass {
+    display: block;
+  }
+}

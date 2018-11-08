@@ -1,0 +1,85 @@
+.app-save__wrapper {
+  @include container($mobile-width);
+}
+
+.app-save__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 22px 0;
+}
+
+.app-save__text {
+  font-weight: 300;
+  text-align: center;
+  color: $white;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.app-save__item {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 18px;
+}
+
+.app-save__link {
+  display: flex;
+}
+
+.app-save__btn {
+  width: 100%;
+  color: $white;
+  padding: 11px 20px 14px 20px;
+  font-weight: 700;
+  border-color: $white;
+  display: block;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $pink;
+  }
+
+  &:active {
+    background-color: $white;
+    color: fade($pink, 30);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .app-save {
+    width: 300px;
+    margin-right: auto;
+  }
+
+  .app-save__text {
+    font-size: 18px;
+  }
+
+  .app-save__list {
+    margin-top: 45px;
+    margin-bottom: 38px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .app-save {
+    width: 300px;
+    margin-right: auto;
+  }
+
+  .app-save__btn {
+    font-size: 21px;
+  }
+
+  .app-save__text {
+    font-size: 18px;
+  }
+
+  .app-save__list {
+    margin-top: 65px;
+    margin-bottom: 58px;
+  }
+}

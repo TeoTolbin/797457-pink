@@ -1,0 +1,17 @@
+.main-footer {
+  display: block;
+
+  &--index {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer {
+    padding-top: 5px;
+
+    &--index {
+      display: block;
+    }
+  }
+}

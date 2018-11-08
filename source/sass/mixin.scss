@@ -1,10 +1,35 @@
-@mixin reset-list {
-  margin: 0;
-  padding: 0;
+@mixin reset-list($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
   list-style: none;
 }
 
 @mixin reset-link() {
-  text-decoration: none;
-  color: $white;
+  display: inline-block;
+}
+
+@mixin reset-button() {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+@mixin reset-container() {
+  position: static;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin container($min-width: 100%, $padding: 20px) {
+  position: relative;
+  width: $min-width;
+  margin: 0 auto;
+  padding: 0 $padding;
+}
+
+@mixin background($position-x: 50%, $position-y: 50%, $size: cover) {
+  background-repeat: no-repeat;
+  background-position: $position-x $position-y;
+  background-size: $size;
 }
