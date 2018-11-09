@@ -8,9 +8,9 @@
   display: none;
 }
 
-.main-page__app-effects {
+/*.main-page__app-effects {
   padding-top: 22px;
-}
+}*/
 
 .main-page__rates {
   padding: 74px 0 46px 0;
@@ -44,6 +44,7 @@
 @media (min-width: $desktop-width) {
   .main-page__feedback {
     padding-top: 18px;
+    padding-bottom: 0;
   }
 
   .main-page__effect {

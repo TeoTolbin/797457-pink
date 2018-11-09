@@ -87,8 +87,8 @@
 
   &--cansel {
     margin-bottom: 12px;
-    color: fade($darker, 10);
-    border-color: fade($darker, 10);
+    color: rgba(40,54,69,.1);
+    border-color: rgba(40,54,69,.1);
 
     &:hover,
     &:focus {
@@ -195,9 +195,16 @@
   }
 
   .editor__send {
-    margin-top: auto;
-    flex-grow: 0;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //margin-top: auto;
+    //flex-grow: 0;
+    //padding: 0;
+  }
+
+  .editor__send .btn {
+    width: 183px;
   }
 
   .editor__btn--submit {

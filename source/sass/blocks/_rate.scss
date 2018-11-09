@@ -44,6 +44,7 @@
     width: 74px;
     height: 73px;
     background-image: url("../img/bg-hit.svg");
+    
     @include background();
 
     transform: rotate(45deg);

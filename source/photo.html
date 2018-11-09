@@ -17,7 +17,7 @@
       <div class="main-header__up main-header__up--open">
         <div class="main-header__main-wrapper">
           <div class="main-header__wrapper">
-            <a class="main-header__logo" href="#">
+            <a class="main-header__logo" href="index.html">
               <svg class="logo-svg" viewBox="0 0 146.3 40.375" width="146" height="40">
                 <g class="logo-svg__mobile">
                   <path d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.064 c0,4.861-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.288-1.288,1.288c-0.676,0-1.256-0.58-1.256-1.288V18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917H79.988L79.988,29.641z"></path>
@@ -71,7 +71,7 @@
       </div>
       <!--Заголовок-->
       <div class="main-header__inner inner">
-        <div class="inneer__wrapper">
+        <div class="inner__wrapper">
           <h1 class="inner__slogan inner__slogan--photo">Фотографии пользователей</h1>
         </div>
       </div>
@@ -94,7 +94,7 @@
               </div>
               <picture>
                 <source media="(min-width: 960px)" srcset="img/panorama-desktop@2x.jpg 2x, img/panorama-desktop@1x.jpg 1x">
-                <source media="(min-width: 660px)" srcset="img/panorama-desktop@2x.jpg 2x, img/panorama-tablet@1x.jpg 1x">
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet@2x.jpg 2x, img/panorama-tablet@1x.jpg 1x">
                 <img class="photo__image" srcset="img/panorama-mobile@2x.jpg 2x" src="img/panorama-mobile@1x.jpg" alt="Панорама дня">
               </picture>
             </a>
@@ -132,7 +132,7 @@
               <div class="photo__content">
                 <header class="photo__info">
                   <p class="photo__author">Левон
-                    <time class="photo__date" datetime="2018-09-29 15:55:00">(5 часов назад)</time>
+                    <time class="photo__time" datetime="2018-09-29 15:55:00">(5 часов назад)</time>
                   </p>
                 </header>
                 <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -160,7 +160,7 @@
               <div class="photo__content">
                 <header class="photo__info">
                   <p class="photo__author">Антон
-                    <time class="photo__date" datetime="2018-09-29 08:55:00">(12 часов назад)</time>
+                    <time class="photo__time" datetime="2018-09-29 08:55:00">(12 часов назад)</time>
                   </p>
                 </header>
                 <p class="photo__comment">Соседи будут рады!</p>
@@ -188,7 +188,7 @@
               <div class="photo__content">
                 <header class="photo__info">
                   <p class="photo__author">Борис
-                    <time class="photo__date" datetime="2018-09-29 00:55:00">(20 часов назад)</time>
+                    <time class="photo__time" datetime="2018-09-29 00:55:00">(20 часов назад)</time>
                   </p>
                 </header>
                 <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -216,7 +216,7 @@
               <div class="photo__content">
                 <header class="photo__info">
                   <p class="photo__author">Сергей
-                    <time class="photo__date" datetime="2018-09-28 19:55:00">(25 часов назад)</time>
+                    <time class="photo__time" datetime="2018-09-28 19:55:00">(25 часов назад)</time>
                   </p>
                 </header>
                 <p class="photo__comment">Самая кубанская в мире!</p>
@@ -244,7 +244,7 @@
               <div class="photo__content">
                 <header class="photo__info">
                   <p class="photo__author">Максим
-                    <time class="photo__date" datetime="2018-09-28 08:55:00">(40 часов назад)</time>
+                    <time class="photo__time" datetime="2018-09-28 08:55:00">(40 часов назад)</time>
                   </p>
                 </header>
                 <p class="photo__comment">Где снег-то?</p>
@@ -272,7 +272,7 @@
               <div class="photo__content">
                 <header class="photo__info">
                   <p class="photo__author">Надежда
-                    <time class="photo__date" datetime="2018-09-28 03:55:00">(45 часов назад)</time>
+                    <time class="photo__time" datetime="2018-09-28 03:55:00">(45 часов назад)</time>
                   </p>
                 </header>
                 <p class="photo__comment">Всем GM и взаимные лайки!</p>
@@ -344,8 +344,7 @@
                 <div class="filters__item">
                   <button class="filters__toggle" type="button">
                     <svg class="filters__icon filters__icon--contrast" width="35" height="35">
-                      <path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
-                      <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
+                      <path d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z"></path>
                     </svg>
                   </button>
                   <input class="visually-hidden" type="range" id="contrast" name="filter-contrast" min="0" max="10" value="7">
@@ -359,7 +358,7 @@
               </div>
               <div class="editor__send">
                 <button class="btn editor__btn editor__btn--submit" type="submit">Запостить</button>
-                <button class="btn editor__btn editor__btn--cansel" type="Reset">Отмена</button>
+                <button class="btn editor__btn editor__btn--cansel" type="reset">Отмена</button>
               </div>
             </div>
           </div>

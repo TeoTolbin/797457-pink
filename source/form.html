@@ -17,7 +17,7 @@
       <div class="main-header__up main-header__up--open">
         <div class="main-header__main-wrapper">
           <div class="main-header__wrapper">
-            <a class="main-header__logo" href="#">
+            <a class="main-header__logo" href="index.html">
               <svg class="logo-svg" viewBox="0 0 146.3 40.375" width="146" height="40">
                 <g class="logo-svg__mobile">
                   <path d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.064 c0,4.861-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.288-1.288,1.288c-0.676,0-1.256-0.58-1.256-1.288V18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917H79.988L79.988,29.641z"></path>
@@ -71,7 +71,7 @@
       </div>
       <!--Заголовок-->
       <div class="main-header__inner inner">
-        <div class="inneer__wrapper">
+        <div class="inner__wrapper">
           <h1 class="inner__slogan inner__slogan--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
       </div>
@@ -101,8 +101,8 @@
                 <input class="form__text" type="text" id="last-name" name="last-name" placeholder="Введите ваше имя *" required="">
               </div>
               <div class="form__field-name">
-                <label class="form__label" for="patronimic">Отчество:</label>
-                <input class="form__text" type="text" id="patronimic" name="sur-name" placeholder="Ну и отчество тоже">
+                <label class="form__label" for="patronymic">Отчество:</label>
+                <input class="form__text" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
               </div>
             </div>
             <!--Вид приложения-->
@@ -111,15 +111,15 @@
                 <h3 class="form__legend form__legend--apps">С каким приложением путешествовали?</h3>
                 <ul class="form__list form__list--apps">
                   <li class="form__option">
-                    <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-1" checked="">
+                    <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-1" value="ios" checked>
                     <label class="form__label-list form__radio" for="apps-item-1">Pink для iOS</label>
                   </li>
                   <li class="form__option">
-                    <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-2">
+                    <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-2" value="android">
                     <label class="form__label-list form__radio" for="apps-item-2">Pink на Android</label>
                   </li>
                   <li class="form__option">
-                    <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-3">
+                    <input class="visually-hidden form__check" type="radio" name="apps" id="apps-item-3" value="windows">
                     <label class="form__label-list form__radio" for="apps-item-3">Windows Phone</label>
                   </li>
                 </ul>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="form__field-contact form__field-contact--email">
                   <label class="form__label form__label--contact" for="email">Адрес почты</label>
-                  <input class="form__text form__text--contact" type="email" id="email" name="email" placeholder="Введите почту *" required="">
+                  <input class="form__text form__text--contact" type="email" id="email" name="email" placeholder="Введите почту *" required>
                 </div>
               </div>
             </div>
@@ -146,31 +146,31 @@
                 <div class="form__list form__list--achieves">
                   <div class="form__option-group">
                     <div class="form__option">
-                      <input class="visually-hidden form__check" type="checkbox" name="achieves-1" id="achieves-item-1" checked="">
+                      <input class="visually-hidden form__check" type="checkbox" name="sharck" id="achieves-item-1" checked>
                       <label class="form__label-list form__checkbox" for="achieves-item-1">Сделал селфи с акулой</label>
                     </div>
                     <div class="form__option">
-                      <input class="visually-hidden form__check" type="checkbox" name="achieves-2" id="achieves-item-2" checked="">
+                      <input class="visually-hidden form__check" type="checkbox" name="beach" id="achieves-item-2" checked>
                       <label class="form__label-list form__checkbox" for="achieves-item-2">Обгорел на пляже</label>
                     </div>
                   </div>
                   <div class="form__option-group">
                     <div class="form__option">
-                      <input class="visually-hidden form__check" type="checkbox" name="achieves-3" id="achieves-item-3">
+                      <input class="visually-hidden form__check" type="checkbox" name="chuck" id="achieves-item-3">
                       <label class="form__label-list form__checkbox" for="achieves-item-3">Видел Чака Норриса</label>
                     </div>
                     <div class="form__option">
-                      <input class="visually-hidden form__check" type="checkbox" name="achieves-4" id="achieves-item-4">
+                      <input class="visually-hidden form__check" type="checkbox" name="souvenires" id="achieves-item-4">
                       <label class="form__label-list form__checkbox" for="achieves-item-4">Накупил сувениров</label>
                     </div>
                   </div>
                   <div class="form__option-group">
                     <div class="form__option">
-                      <input class="visually-hidden form__check" type="checkbox" name="achieves-5" id="achieves-item-5" checked="">
+                      <input class="visually-hidden form__check" type="checkbox" name="tower" id="achieves-item-5" checked>
                       <label class="form__label-list form__checkbox" for="achieves-item-5">Удержал башню</label>
                     </div>
                     <div class="form__option">
-                      <input class="visually-hidden form__check" type="checkbox" name="achieves-6" id="achieves-item-6">
+                      <input class="visually-hidden form__check" type="checkbox" name="hotel" id="achieves-item-6">
                       <label class="form__label-list form__checkbox" for="achieves-item-6">Разгромил отель</label>
                     </div>
                   </div>

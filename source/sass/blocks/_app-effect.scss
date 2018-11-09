@@ -22,6 +22,7 @@
 @media (min-width: $tablet-width) {
   .app-effect {
     text-align: left;
+    
     @include reset-container();
     padding-bottom: 25px;
   }

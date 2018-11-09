@@ -19,11 +19,12 @@
     width: 238px;
     height: 276px;
     background-image: url("../img/icon-timer.svg");
+
     @include background();
   }
 }
 
-.effect__time {
+.effect__hour {
   position: relative;
   z-index: 1;
   display: flex;
@@ -111,7 +112,7 @@
     }
   }
 
-  .effect__time {
+  .effect__hour {
     position: relative;
     z-index: 1;
     display: flex;
