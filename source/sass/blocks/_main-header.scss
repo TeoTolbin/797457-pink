@@ -19,7 +19,7 @@
 }
 
 .main-header__up {
-  background-color: fade($black, 30%);
+  background-color: rgba(0,0,0,.3);
 
   &--open {
     background-color: $darker;
@@ -35,9 +35,6 @@
   display: block;
   margin: 0;
   padding: 21px 20px 15px 0;
-  
-  @include reset-list();
-
   outline: none;
 }
 
@@ -72,8 +69,8 @@
   }
 
   &:active::before {
-    background-color: fade($pink, 30);
-    box-shadow: 0 10px 0 0 fade($pink, 30), 0 20px 0 0 fade($pink, 30);
+    background-color: rgba(210, 40, 86, .3);
+    box-shadow: 0 10px 0 0 rgba(210, 40, 86, .3), 0 20px 0 0 rgba(210, 40, 86, .3);
   }
 
   &--open {
@@ -107,7 +104,7 @@
 
     &:active::before,
     &:active::after {
-      background-color: fade($pink, 30);
+      background-color: rgba(210, 40, 86, .3);
       box-shadow: none;
     }
   }
@@ -119,7 +116,7 @@
 }
 
 .main-header__logo:active .logo-svg {
-  fill: fade($white, 30);
+  fill: rgba(255, 255, 255, .3);
 }
 
 .main-header__nav {
@@ -180,7 +177,7 @@
   }
 
   .main-header__up--open {
-    background-color: fade($black, 30%);
+    background-color: rgba(0, 0, 0, .3);
     border-color: transparent;
   }
 

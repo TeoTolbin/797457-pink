@@ -17,8 +17,8 @@
   margin: 0;
   width: 15px;
   height: 20px;
-  
-  @include reset-button();
+  background-image: url("../../img/icon-heart.svg");
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -37,7 +37,6 @@
   }
 
   .likes__btn {
-    top: 3px;
     left: auto;
     right: 5px;
   }
