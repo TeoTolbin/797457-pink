@@ -27,6 +27,6 @@
 
 @media (min-width: $desktop-width) {
   .feedback__wrapper {
-    @include container($desktop-width, 0px);
+    @include container($desktop-width, 0);
   }
 }

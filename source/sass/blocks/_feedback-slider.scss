@@ -44,7 +44,7 @@
   width: 12px;
   height: 12px;
   margin: 0 7px;
-  background-color: rgba(40,54,69,.3);
+  background-color: rgba(40, 54, 69, 0.3);
   border: 3px solid $white;
   border-radius: 50%;
   cursor: pointer;
@@ -102,6 +102,7 @@
       width: 79px;
       height: 63px;
       background-image: url("../img/icon-quotes.svg");
+
       @include background();
     }
   }
@@ -125,6 +126,7 @@
     display: block;
     width: 50px;
     height: 100%;
+
     @include reset-button();
     opacity: 0.3;
 
@@ -141,12 +143,14 @@
   .feedback-slider__left {
     left: 0;
     background-image: url("../img/icon-review-arrow-left.svg");
+
     @include background(35%, calc(50% + 15px), auto);
   }
 
   .feedback-slider__right {
     right: 0;
     background-image: url("../img/icon-review-arrow-right.svg");
+
     @include background(65%, calc(50% + 15px), auto);
   }
 }

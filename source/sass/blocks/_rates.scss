@@ -49,7 +49,7 @@
   width: 12px;
   height: 12px;
   margin: 0 7px;
-  background-color: rgba(40,54,69,.3);
+  background-color: rgba(40, 54, 69, 0.3);
   border: 3px solid $lighter;
   border-radius: 50%;
   cursor: pointer;
@@ -76,7 +76,7 @@
 }
 
 .rates__2:checked ~ .rates__table {
-  left: calc(50% - 960px/2 + 60px);
+  left: calc(50% - 960px / 2 + 60px);
 }
 
 .rates__3:checked ~ .rates__table {

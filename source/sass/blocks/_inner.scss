@@ -135,7 +135,7 @@
         width: 1050px;
         height: 645px;
         background-image: url("../img/iphone-hand-desktop@1x.png");
-        
+
         @include background(100%, 0%, 1050px 645px);
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
