@@ -2,7 +2,10 @@
   position: relative;
   overflow: hidden;
   background-color: $lighter;
-  max-width: 660px;
+
+  @media (min-width: $mobile-width) {
+    max-width: 660px;
+  }
 
   &::before {
     content: "";
@@ -18,13 +21,8 @@
   }
 }
 
-/*.rates__wrapper {
-  @include container($mobile-width);
-}*/
-
 .rates__table {
   position: relative;
-  //left: calc(50% - 960/2 + 60px);
   width: $tablet-width;
   margin: 0 auto;
   padding-top: 20px;
@@ -32,7 +30,7 @@
   border-collapse: separate;
   border-spacing: 1px;
   transition: left 0.5s ease-in-out;
-  //table-layout: fixed;   если включу, то в мобиле станет хорошо, а во всех остальных уедет влево
+  table-layout: fixed;
 }
 
 .rates__toggles {
