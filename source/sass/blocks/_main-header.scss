@@ -43,14 +43,13 @@
   top: 6px;
   right: 17px;
   z-index: 2;
-  display: block;
+  display: none;
   width: 70px;
   height: 50px;
   background: none;
   cursor: pointer;
   border: none;
   outline: none;
-  display: none;
 
   &::before {
     content: "";
@@ -157,7 +156,6 @@
 
   .main-header__btn {
     top: 28px;
-    display: none;
   }
 }
 
@@ -197,10 +195,6 @@
 
   .main-header__logo {
     padding: 28px 20px 35px 0;
-  }
-
-  .main-header__btn {
-    display: none;
   }
 
   .main-header__nav {
