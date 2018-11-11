@@ -50,6 +50,7 @@
   cursor: pointer;
   border: none;
   outline: none;
+  display: none;
 
   &::before {
     content: "";
@@ -156,6 +157,7 @@
 
   .main-header__btn {
     top: 28px;
+    display: none;
   }
 }
 

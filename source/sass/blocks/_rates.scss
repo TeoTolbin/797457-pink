@@ -3,9 +3,9 @@
   overflow: hidden;
   background-color: $lighter;
 
-  @media (min-width: $mobile-width) {
-    max-width: 660px;
-  }
+ /*@media (min-width: $mobile-width) {
+    max-width: $tablet-width;
+  }*/
 
   &::before {
     content: "";
@@ -21,8 +21,13 @@
   }
 }
 
+/*.rates__wrapper {
+  @include container($mobile-width);
+}*/
+
 .rates__table {
   position: relative;
+  left: calc(50% - 960 / 2 + 60px);
   width: $tablet-width;
   margin: 0 auto;
   padding-top: 20px;
@@ -98,6 +103,10 @@
 }
 
 @media (min-width: $desktop-width) {
+/*  .rates {
+    min-width: 1200px;
+  }
+*/
   .rates__wrapper {
     @include container($desktop-width);
     padding: 0;
