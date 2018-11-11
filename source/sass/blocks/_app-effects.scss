@@ -64,7 +64,6 @@
 }
 
 .app-effects__title {
-  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   font-size: 24px;
@@ -72,6 +71,16 @@
   font-weight: 300;
   text-align: center;
   color: $darker;
+
+  &:nth-child(1) {
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  &:nth-child(2) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: $tablet-width) {
