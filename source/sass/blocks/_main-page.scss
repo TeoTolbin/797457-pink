@@ -1,15 +1,19 @@
 .main-page__feedback {
   background-color: $white;
   padding-top: 22px;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
 }
 
 .main-page__effect {
   display: none;
 }
 
+.main-page__app-effects {
+  padding-top: 22px;
+}
+
 .main-page__rates {
-  padding: 74px 0 46px 0;
+  padding: 74px 0 48px 0;
 }
 
 .main-page__photos {
@@ -21,9 +25,13 @@
     padding-top: 36px;
   }
 
+  .main-page__app-effects {
+    padding-top: 50px;
+  }
+
   .main-page__effect {
     display: flex;
-    padding: 58px 0 60px 0;
+    padding: 48px 0 60px 0;
     background-color: $white;
   }
 
@@ -43,10 +51,14 @@
     padding-bottom: 0;
   }
 
+  .main-page__app-effects {
+    padding-top: 67px;
+  }
+
   .main-page__effect {
     background-color: $lighter;
 
-    padding: 40px 0 74px 0;
+    padding: 20px 0 74px 0;
   }
 
   .main-page__rates {

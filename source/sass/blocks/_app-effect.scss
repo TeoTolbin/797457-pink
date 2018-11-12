@@ -3,13 +3,13 @@
   text-align: center;
 
   @include container($mobile-width);
-  padding: 0 15px 21px 15px;
+  padding: 0 15px 13px 15px;
 }
 
 .app-effect__header {
   font-size: 18px;
-  line-height: 10px;
-  margin: 18px 0;
+  line-height: 24px;
+  margin: 18px 0 12px 0;
 }
 
 .app-effect__description {
@@ -24,7 +24,11 @@
     text-align: left;
 
     @include reset-container();
-    padding-bottom: 25px;
+    padding-bottom: 16px;
+  }
+
+  .app-effect__header {
+    margin: 18px 0 12px 0;
   }
 
   .app-effect__description {

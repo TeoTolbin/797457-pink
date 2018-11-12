@@ -1,5 +1,9 @@
 .editor__wrapper {
-  @include container($mobile-width);
+  //@include container($mobile-width);
+  position: relative;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 0 19px;
 }
 
 .editor__header {
@@ -18,7 +22,7 @@
 }
 
 .editor__form {
-  padding-top: 20px;
+  padding-top: 19px;
   padding-bottom: 25px;
   background-color: $lighter;
 }
@@ -44,7 +48,7 @@
 .editor__filters {
   position: relative;
   border: none;
-  padding-top: 40px;
+  padding-top: 39px;
 }
 
 .editor__send {
@@ -65,11 +69,11 @@
 
 .editor__btn {
   width: 100%;
-  padding: 13px 12px 15px 12px;
+  padding: 12px 14px 15px 12px;
   font-weight: 700;
 
   &--submit {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     color: $pink;
     border-color: $pink;
 
@@ -172,8 +176,8 @@
   }
 
   .editor__coordinates {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 90px;
+    padding-right: 70px;
   }
 
   .editor__picture {
@@ -202,6 +206,7 @@
 
   .editor__send .btn {
     width: 183px;
+    padding-left: 19px;
   }
 
   .editor__btn--submit {
