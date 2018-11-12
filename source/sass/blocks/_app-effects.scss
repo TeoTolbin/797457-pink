@@ -72,27 +72,9 @@
   font-weight: 300;
   text-align: center;
   color: $darker;
-
-  /*@media(min-width: $mobile-width) {
-    &:nth-child(1) {
-      margin-bottom: 20px;
-      margin-top: 40px;
-    }
-  }
-
-  @media(min-width: $mobile-width) {
-    &:nth-child(2) {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-  }*/
 }
 
 @media (min-width: $tablet-width) {
-  /*.app-effects {
-    padding-top: 50px;
-  }*/
-
   .app-effects__wrapper {
     @include container($tablet-width);
   }
@@ -161,10 +143,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  /*.app-effects {
-    padding-top: 67px;
-  }*/
-
   .app-effects__wrapper {
     @include container($desktop-width);
   }
